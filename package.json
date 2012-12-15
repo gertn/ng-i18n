@@ -1,0 +1,16 @@
+{
+  "author": "nuyensgert",
+  "name": "ng-i18n",
+  "version": "0.0.1-SNAPSHOT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gertn/ng-i18n.git"
+  },
+  "engines": {
+    "node": ">= 0.8.4"
+  },
+  "dependencies": {},
+  "devDependencies": {
+   
+  }
+}

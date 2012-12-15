@@ -1,0 +1,6 @@
+Install grunt (Grunt is a task-based command line build tool for JavaScript projects.)
+https://github.com/gruntjs/grunt
+PREREQUISITES
+node.js installed
+Installation
+npm install -g grunt
