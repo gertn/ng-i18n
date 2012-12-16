@@ -1,9 +1,37 @@
 {
-  "author": "nuyensgert",
   "name": "ng-i18n",
-  "version": "0.0.1-SNAPSHOT",
+  "version": "0.1.0",
+  "description": "I18n module for AngularJs",
+  "main": "Gruntfile.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {
+    "grunt": "~0.4.0rc3",
+    "grunt-contrib-jshint": "~0.1.0",
+    "grunt-contrib-nodeunit": "~0.1.1",
+    "testacular": "~0.4.0",
+    "async": "~0.1.22"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0rc3",
+    "grunt-cli": "~0.1.4",
+    "grunt-contrib-watch": "~0.2.0a",
+    "grunt-contrib-clean": "~0.4.0a"
+  },
+  "scripts": {
+    "test": "test"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:gertn/ng-i18n.git"
-  }
+    "url": "git://github.com/gertn/ng-i18n.git"
+  },
+  "keywords": [
+    "angularjs",
+    "i18n",
+    "testacular"
+  ],
+  "author": "nuyensgert",
+  "license": "MIT"
 }

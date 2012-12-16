@@ -1,55 +1,70 @@
-/*global module:false*/
+var testacular = require('testacular');
+
 module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    pkg: '<json:package.json>',
-    meta: {
-      banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-        '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-        '<%= pkg.homepage ? "* " + pkg.homepage + "\n" : "" %>' +
-        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-        ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
+	distdir: 'dist',
+	srcdir: 'src/js',
+	targetdir: 'target',
+    pkg: grunt.file.readJSON('package.json'),
+	src: {
+      js: ['src/**/*.js'],
     },
-    lint: {
-      files: ['grunt.js', 'lib/**/*.js', 'test/**/*.js']
-    },
-    concat: {
-      dist: {
-        src: ['<banner:meta.banner>', '<file_strip_banner:lib/<%= pkg.name %>.js>'],
-        dest: 'dist/<%= pkg.name %>.js'
-      }
-    },
-    min: {
-      dist: {
-        src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
-        dest: 'dist/<%= pkg.name %>.min.js'
-      }
-    },
-    watch: {
-      files: '<config:lint.files>',
-      tasks: 'lint'
-    },
-    jshint: {
+	clean: ['<%= targetdir %>/*', '<%= distdir %>/*'],
+	copyRootdirs: {
+		dest: '<%= targetdir %>',
+		rootdirs: ['vendor', 'config', 'src', 'test'],
+		noProcess: ['vendor']
+	},
+	uglify: {
       options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        boss: true,
-        eqnull: true,
-        browser: true
+		mangle: false,
+        banner: '/**\n' + ' * <%= pkg.description %>\n' +
+		  ' * @version v<%= pkg.version %> - ' +
+		  '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
+		  //' * @link <%= pkg.homepage %>\n' +
+		  ' * @license MIT License, http://www.opensource.org/licenses/MIT\n' + ' */'
       },
-      globals: {}
+      dist: {
+        src: '<%= srcdir %>/<%= pkg.name %>.js',
+        dest: '<%= srcdir %>/<%= pkg.name %>.min.js'
+      }
+	},
+	watch: {
+	  files:['<%= src.js %>', '<%= test.unit %>'],
+      tasks: 'build'
     },
-    uglify: {}
+	test: {
+      unit: ['test/unit/**/*Spec.js'],
+      e2e: ['test/e2e/**/*scenarios.js'],
+	  buildDir: '<%= targetdir %>'
+    },
+	dist: {
+		file1: {
+			src: '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>.js',
+			dest: '<%= distdir %>/<%= pkg.name %>-<%= pkg.version %>.js'
+		},
+		file2: {
+			src: '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>.min.js',
+			dest: '<%= distdir %>/<%= pkg.name %>-<%= pkg.version %>.min.js'
+		}
+	}
   });
 
-  // Default task.
-  grunt.registerTask('default', 'lint concat min');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch'); 
+  grunt.loadNpmTasks('grunt-contrib-clean');  
+  grunt.loadTasks('build');
+  
+	grunt.registerMultiTask('dist', 'Copy files to distdir', function() {
+		grunt.log.write('Dist file copy from "' + this.data.src + '" to "' + this.data.dest + '"');
+		grunt.file.copy(this.data.src, this.data.dest);
+		grunt.log.ok();
+	});
 
+  // Default task(s).
+  grunt.registerTask('default', ['build']);
+  
+  grunt.registerTask('build', [ 'clean', 'uglify', 'copyRootdirs', 'testBuild', 'testBuildMin', 'dist']);
 };
