@@ -52,12 +52,16 @@ module.exports = function(grunt) {
 
     var finish = this.async();
     var queue = [];
+	var changes = false;
     var next = function() {
       var cmd = queue.shift();
 
       if (!cmd) return finish();
 
       exec(cmd[0], function(err, output) {
+		if(!grunt.util._.isEmpty(output)){
+			return grunt.fail.fatal('Commit and push changes!!!');
+		}
 		var output = output || 'ok';
 		grunt.log.writeln(output);
         if (err) return grunt.fail.fatal(err.message.replace(/\n$/, '.'));
@@ -72,7 +76,7 @@ module.exports = function(grunt) {
     };
 	
 	run('git status --porcelain');
-    
+    run('git diff master origin/master');
     next();
   });
   
