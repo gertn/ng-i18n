@@ -48,7 +48,7 @@ module.exports = function(grunt) {
     grunt.log.ok('Version bumped to ' + newVersion);
   });
   
-    grunt.registerTask('changes', 'check for changes', function() {
+    grunt.registerTask('checkForChangedFiles', 'check for changes', function() {
 
     var finish = this.async();
     var queue = [];
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
 
       exec(cmd[0], function(err, output) {
 		if(!grunt.util._.isEmpty(output)){
-			return grunt.fail.fatal('Commit and push changes!!!');
+			return grunt.fail.fatal('Commit and/or push changes!!!');
 		}
         if (err) return grunt.fail.fatal(err.message.replace(/\n$/, '.'));
         if (cmd[1]) grunt.log.ok(cmd[1]);
