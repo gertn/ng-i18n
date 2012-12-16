@@ -103,7 +103,7 @@ module.exports = function(grunt) {
     var PKG_FILE = 'package.json';
     var pkg = grunt.file.readJSON(PKG_FILE);
     var currentVersion = pkg.version;
-    
+    grunt.file.write('running git commands');
 
     run('git commit package.json -m "Version ' + currentVersion + '"', 'Changes committed');
     run('git tag -a v' + currentVersion + ' -m "Version ' + currentVersion + '"', 'New tag "v' + currentVersion + '" created');
