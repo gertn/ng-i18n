@@ -5,12 +5,5 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:gertn/ng-i18n.git"
-  },
-  "engines": {
-    "node": ">= 0.8.4"
-  },
-  "dependencies": {},
-  "devDependencies": {
-   
   }
 }
