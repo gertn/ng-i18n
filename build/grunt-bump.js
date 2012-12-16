@@ -48,7 +48,7 @@ module.exports = function(grunt) {
     grunt.log.ok('Version bumped to ' + newVersion);
   });
   
-    grunt.registerTask('checkForChangedFiles', 'check for changes', function() {
+  grunt.registerTask('checkForChangedFiles', 'check for changes', function() {
 
     var finish = this.async();
     var queue = [];
@@ -84,7 +84,6 @@ module.exports = function(grunt) {
     var queue = [];
     var next = function() {
       var cmd = queue.shift();
-
       if (!cmd) return finish();
 
       exec(cmd[0], function(err, output) {
@@ -105,7 +104,7 @@ module.exports = function(grunt) {
     var currentVersion = pkg.version;
     grunt.file.write('running git commands');
 
-    run('git commit package.json -m "Version ' + currentVersion + '"', 'Changes committed');
+    //run('git commit package.json -m "Version ' + currentVersion + '"', 'Changes committed');
     run('git tag -a v' + currentVersion + ' -m "Version ' + currentVersion + '"', 'New tag "v' + currentVersion + '" created');
     run('git push origin master --tags', 'Pushed to github');
     next();
