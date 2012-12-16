@@ -67,4 +67,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['build']);
   
   grunt.registerTask('build', [ 'clean', 'uglify', 'copyRootdirs', 'testBuild', 'testBuildMin', 'dist']);
+  
+  grunt.registerTask('release', [ 'build', 'tag', 'bump']);
 };
