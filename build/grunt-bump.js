@@ -58,7 +58,7 @@ module.exports = function(grunt) {
       if (!cmd) return finish();
 
       exec(cmd[0], function(err, output) {
-		var output = output || 'error';
+		var output = output || 'ok';
 		grunt.log.writeln(output);
         if (err) return grunt.fail.fatal(err.message.replace(/\n$/, '.'));
         if (cmd[1]) grunt.log.ok(cmd[1]);
