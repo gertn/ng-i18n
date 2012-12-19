@@ -18,7 +18,8 @@
     "grunt": "~0.4.0rc3",
     "grunt-cli": "~0.1.4",
     "grunt-contrib-watch": "~0.2.0a",
-    "grunt-contrib-clean": "~0.4.0a"
+    "grunt-contrib-clean": "~0.4.0a",
+    "grunt-contrib-uglify": "~0.1.0"
   },
   "scripts": {
     "test": "test"
