@@ -19,7 +19,8 @@
     "grunt-cli": "~0.1.4",
     "grunt-contrib-watch": "~0.2.0a",
     "grunt-contrib-clean": "~0.4.0a",
-    "grunt-contrib-uglify": "~0.1.0"
+    "grunt-contrib-uglify": "~0.1.0",
+    "grunt-contrib-concat": "~0.1.1"
   },
   "scripts": {
     "test": "test"
@@ -34,5 +35,6 @@
     "testacular"
   ],
   "author": "nuyensgert",
-  "license": "MIT"
+  "license": "MIT License, http://www.opensource.org/licenses/MIT",
+  "homepage": "http://ng-i18n.github.com"
 }

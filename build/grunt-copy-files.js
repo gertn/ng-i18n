@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 			grunt.file.copy(abspath, dest + '/' + abspath, {noProcess: true});
 		} else {
 			grunt.log.write('Copy file(process) "' + abspath + '"...');
-			grunt.file.copy(abspath, dest + '/' + abspath);
+			grunt.file.copy(abspath, dest + '/' + abspath, {process: grunt.template.process});
 		}
 		grunt.log.ok();
 	};
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 	grunt.util._.each(rootdirs, function(rootdir) {
 		grunt.log.writeln('Processing rootdir "' + rootdir + '"...');
 		grunt.file.recurse(rootdir, copyFile);
-		grunt.log.ok('End processing rootdir "' + rootdir + '"...')
+		grunt.log.ok('End processing rootdir "' + rootdir + '"...');
 	});
   });
 };
