@@ -7,5 +7,7 @@
   - sh -e /etc/init.d/xvfb start
   - npm install -g grunt@0.4.x testacular@0.4.x
   - node scripts/web-server.js
+  - node scripts/web-server.js &
+  - sleep 3 # give server some time to start
 
  script: "grunt"
