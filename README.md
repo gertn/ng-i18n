@@ -31,7 +31,7 @@ It will load the resource bundle with the following url:
 var url = '/i18n/resourceBundle_' + ngI18nLocaleContextHolder.getLocale() + '.json';
 ```
 
-## Example
+## Example app
 You can find an example app in the app directory.
 
 Look at `controller.js`, `index.html` and the two partials in the `partials` directory.
