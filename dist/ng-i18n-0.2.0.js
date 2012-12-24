@@ -1,6 +1,6 @@
 /**
  * I18n module for AngularJs
- * @version v0.1.0 - 2012-12-24
+ * @version v0.2.0 - 2012-12-24
  * @link http://ng-i18n.github.com
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -8,13 +8,14 @@
 
 angular.module('ngI18nConfig', []).value('ngI18nConfig', {});
 angular.module('ngI18n', ['ngI18nService', 'ngI18nConfig'])
-    .value('ngI18nVersion', '0.1.0');
+    .value('ngI18nVersion', '0.2.0');
 
 angular.module('ngI18nService', [],function ($provide) {
     $provide.factory('ngI18nResourceBundleLoader', ['$http', 'ngI18nConfig', 'ngI18nLocaleContextHolder',
         function ($http, ngI18nConfig, ngI18nLocaleContextHolder) {
+            ngI18nConfig.basePath =  ngI18nConfig.basePath || 'i18n';
             function get() {
-                var url = '/i18n/resourceBundle_' + ngI18nLocaleContextHolder.getLocale() + '.json';
+                var url = '/' + ngI18nConfig.basePath + '/resourceBundle_' + ngI18nLocaleContextHolder.getLocale() + '.json';
                 return $http.get(url);
             }
             return { get:get};

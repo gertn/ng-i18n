@@ -7,7 +7,7 @@
 <script type="text/javascript" src="angular.js"></script>
 <script type="text/javascript" src="ng-i18n.js"></script>
 <script>
-    angular.module('myApp',['ngI18n', ... {other includes}]);
+    angular.module('yourApp',['ngI18n', ... {other includes}]);
 </script>
 ```
 
@@ -30,6 +30,29 @@ It will load the resource bundle with the following url:
 ```javascript
 var url = '/i18n/resourceBundle_' + ngI18nLocaleContextHolder.getLocale() + '.json';
 ```
+
+### ngI18nConfig
+You can declare global config in your app and override global defaults:
+```javascript
+var yourApp = angular.module('yourApp', ['ngI18n']);
+yourApp.value('ngI18nConfig', {
+    ... {add your global defaults}
+});
+```
+
+#### basePath
+Global default for basePath of url for resourceBundle:
+* 'i18n'
+```javascript
+var yourApp = angular.module('yourApp', ['ngI18n']);
+yourApp.value('ngI18nConfig', {
+    //without leading and trailing slashes
+    basePath: "base/path"
+    ... {add your other global defaults}
+});
+```
+See also example app:
+* `app.js`
 
 ## Example app
 You can find an example app in the app directory.

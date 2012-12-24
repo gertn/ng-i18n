@@ -8,3 +8,4 @@ build.xml
 .idea/*
 node_modules
 target
+test_out

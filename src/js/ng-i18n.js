@@ -7,8 +7,9 @@ angular.module('ngI18n', ['ngI18nService', 'ngI18nConfig'])
 angular.module('ngI18nService', [],function ($provide) {
     $provide.factory('ngI18nResourceBundleLoader', ['$http', 'ngI18nConfig', 'ngI18nLocaleContextHolder',
         function ($http, ngI18nConfig, ngI18nLocaleContextHolder) {
+            ngI18nConfig.basePath =  ngI18nConfig.basePath || 'i18n';
             function get() {
-                var url = '/i18n/resourceBundle_' + ngI18nLocaleContextHolder.getLocale() + '.json';
+                var url = '/' + ngI18nConfig.basePath + '/resourceBundle_' + ngI18nLocaleContextHolder.getLocale() + '.json';
                 return $http.get(url);
             }
             return { get:get};

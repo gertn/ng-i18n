@@ -1,9 +1,15 @@
 'use strict';
 
 describe('ngI18nService', function () {
-    var DEFAULT_LOCALE, DEFAULT_LANGUAGE, DEFAULT_USER_LANGUAGE, LOCALE_WITH_COUNTRY;
+    var DEFAULT_LOCALE, DEFAULT_LANGUAGE, DEFAULT_USER_LANGUAGE, LOCALE_WITH_COUNTRY, ngI18nConfig;
     beforeEach(function () {
         module('ngI18nConfig');
+
+        module(function ($provide) {
+            ngI18nConfig = {};
+            $provide.value('ngI18nConfig', ngI18nConfig);
+        });
+
         module('ngI18nService');
         DEFAULT_LOCALE = 'nl';
         DEFAULT_LANGUAGE = 'fr';
@@ -38,6 +44,22 @@ describe('ngI18nService', function () {
             $httpBackend.flush();
 
             //noinspection JSUnusedAssignment
+            expect(resourceBundle).toEqual(resourceBundle_nl);
+
+        });
+
+        it("should be able to get configure base path for url", function(){
+            var resourceBundle;
+            ngI18nLocaleContextHolder.setLocale(DEFAULT_LOCALE);
+            ngI18nConfig.basePath = 'new/base/path'
+            $httpBackend.when('GET', '/new/base/path/resourceBundle_nl.json').respond(resourceBundle_nl);
+
+            ngI18nResourceBundleLoader.get().success(function(data) {
+                resourceBundle = data;
+            });
+
+            $httpBackend.flush();
+
             expect(resourceBundle).toEqual(resourceBundle_nl);
 
         });
