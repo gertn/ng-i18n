@@ -1,31 +1,24 @@
 'use strict';
 
 /* Controllers */
-function MainCtrl(ngI18nLocaleContextHolder, ngI18nResourceBundleLoader, $rootScope) {
+function MainCtrl(ngI18nLocaleContextHolder, ngI18nResourceBundleLoader, $scope) {
 
+    $scope.languages = [
+        {locale:"en"},
+        {locale:"nl"}
+    ];
 
-    $rootScope.languages = [ {locale: "en"}, {locale: "nl"}];
+    $scope.language = $scope.languages[0];
 
-    var defaultLanguage =  $rootScope.languages[0];
-
-    $rootScope.language = defaultLanguage;
-
-    ngI18nLocaleContextHolder.setLocale(defaultLanguage.locale);
-
-    function getResourceBundle() {
-        ngI18nResourceBundleLoader.get().success(function (resourceBundle) {
-            $rootScope.resourceBundle = resourceBundle;
-        });
-    }
-
-    getResourceBundle();
-
-    $rootScope.switchLanguage = function(language) {
+    $scope.$watch('language', function (language) {
         ngI18nLocaleContextHolder.setLocale(language.locale);
-        getResourceBundle();
-    };
+        ngI18nResourceBundleLoader.get().success(function (resourceBundle) {
+            $scope.resourceBundle = resourceBundle;
+        });
+    });
+
 }
-MyCtrl1.$inject = ['ngI18nLocaleContextHolder', 'ngI18nResourceBundleLoader', '$rootScope'];
+MyCtrl1.$inject = ['ngI18nLocaleContextHolder', 'ngI18nResourceBundleLoader', '$scope'];
 
 function MyCtrl1() {
 }
