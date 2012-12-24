@@ -24,6 +24,8 @@ logLevel = LOG_INFO;
 
 browsers = ['Chrome'];
 
+reporters = ['dots', 'junit'];
+
 junitReporter = {
   outputFile: 'test_out/unit.xml',
   suite: 'unit'

@@ -10,11 +10,13 @@ autoWatch = false;
 
 browsers = ['Chrome'];
 
-singleRun = false;
+singleRun = true;
 
 proxies = {
   '/': 'http://localhost:8000/'
 };
+
+reporters = ['dots', 'junit'];
 
 junitReporter = {
   outputFile: 'test_out/e2e.xml',
