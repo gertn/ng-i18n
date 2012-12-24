@@ -41,9 +41,8 @@ yourApp.value('ngI18nConfig', {
 });
 ```
 
-#### basePath
-Global default for basePath of url for resourceBundle is 'i18n'.
-
+#### global default for basePath is 'i18n'
+You can override this:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
 yourApp.value('ngI18nConfig', {
