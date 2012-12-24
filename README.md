@@ -14,8 +14,8 @@
 The source files can be found in the `src/js` directory.
 
 There are two services and a global config:
-* ngI18nResourceBundleLoader
 * ngI18nLocaleContextHolder
+* ngI18nResourceBundleLoader
 * ngI18nConfig
 
 ### ngI18nLocaleContextHolder
@@ -40,6 +40,8 @@ yourApp.value('ngI18nConfig', {
     ... {add your global defaults}
 });
 ```
+Global variables:
+*  basePath: specifies base path of url
 
 #### global default for basePath is 'i18n'
 You can override this:
