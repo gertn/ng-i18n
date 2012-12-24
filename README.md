@@ -13,9 +13,10 @@
 
 The source files can be found in the `src/js` directory.
 
-There are two services:
+There are two services and a global config:
 * ngI18nResourceBundleLoader
 * ngI18nLocaleContextHolder
+* ngI18nConfig
 
 ### ngI18nLocaleContextHolder
 Holds the locale that ngI18nResourceBundleLoader uses to load the bundle.
@@ -41,8 +42,8 @@ yourApp.value('ngI18nConfig', {
 ```
 
 #### basePath
-Global default for basePath of url for resourceBundle:
-* 'i18n'
+Global default for basePath of url for resourceBundle is 'i18n'.
+
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
 yourApp.value('ngI18nConfig', {
@@ -51,8 +52,7 @@ yourApp.value('ngI18nConfig', {
     ... {add your other global defaults}
 });
 ```
-See also example app:
-* `app.js`
+See also example app file `app.js`.
 
 ## Example app
 You can find an example app in the app directory.
