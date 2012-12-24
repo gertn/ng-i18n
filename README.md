@@ -46,4 +46,8 @@ You can pick one of these options:
 Then navigate your browser to `http://localhost:<port>/app/index.html` to see the app running in
 your browser.
  
-
+## Roadmap
+Make the module more configurable:
+* with ngI18nConfig
+* the get method should accept parameter object
+* fallback to default resourceBundle
