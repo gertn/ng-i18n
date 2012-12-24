@@ -40,7 +40,7 @@ yourApp.value('ngI18nConfig', {
     ... {add your global defaults}
 });
 ```
-Global variables:
+Global defaults that can be overridden:
 *  basePath: specifies base path of url
 
 #### global default for basePath is 'i18n'
