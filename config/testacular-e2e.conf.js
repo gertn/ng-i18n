@@ -10,7 +10,7 @@ autoWatch = false;
 
 browsers = ['Chrome'];
 
-singleRun = true;
+singleRun = false;
 
 proxies = {
   '/': 'http://localhost:8000/'

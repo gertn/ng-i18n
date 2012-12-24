@@ -1,16 +1,14 @@
 'use strict';
 
-/* jasmine specs for services go here */
-
 describe('ngI18n app', function () {
     var ngI18nConfig;
     beforeEach(function () {
         module('ngI18n');
     });
 
-    describe('version', function () {
-        it('should return current version', inject(function (version) {
-            expect(version).toEqual('<%= pkg.version %>');
+    describe('ngI18n.version', function () {
+        it('should return current version', inject(function (ngI18nVersion) {
+            expect(ngI18nVersion).toEqual('<%= pkg.version %>');
         }));
     });
 

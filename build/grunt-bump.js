@@ -1,3 +1,5 @@
+'use strict';
+//TODO clean up this module
 module.exports = function(grunt) {
 
   var exec = require('child_process').exec;

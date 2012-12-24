@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(grunt) {
 	var dest = grunt.config.get('copyRootdirs.dest') || 'dist';
 	var rootdirs = grunt.config.get('copyRootdirs.rootdirs') || ['src'];

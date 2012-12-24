@@ -1,28 +1,33 @@
 <!doctype html>
 <html lang="en" ng-app="myApp">
 <head>
-  <meta charset="utf-8">
-  <title>AngularJS I18N</title>
-  <link rel="stylesheet" href="css/app.css"/>
+    <meta charset="utf-8">
+    <title>AngularJS I18N</title>
+    <link rel="stylesheet" href="css/app.css"/>
 </head>
-<body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+<body ng-controller="MainCtrl">
+<ul class="menu">
+    <li><a href="#/view1">{{resourceBundle.view_1}}</a></li>
+    <li><a href="#/view2">{{resourceBundle.view_2}}</a></li>
+    <li><label for="switchLanguage">{{resourceBundle.language}}</label>
+        <select name="switchLanguage" ng-change="switchLanguage(language)" ng-model="language" id="switchLanguage" ng-options="l.locale for l in languages">
+        </select>
+    </li>
+</ul>
 
-  <div ng-view></div>
+<div ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+<div>ngI18n demo app: v<span app-version></span></div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
-  -->
-  <script src="lib/angular/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+-->
+<script src="lib/angular/angular.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+<script src="../src/js/ng-i18n.js"></script>
 </body>
 </html>

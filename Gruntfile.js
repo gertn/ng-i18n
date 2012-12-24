@@ -1,3 +1,5 @@
+'use strict';
+
 var testacular = require('testacular');
 
 module.exports = function(grunt) {
@@ -77,7 +79,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', [ 'build' ]);
 
 	grunt.registerTask('build', [ 'clean', 'uglify', 'copyRootdirs',
-			'testBuild', 'testBuildMin', 'concat', 'dist' ]);
+			'testBuild', 'testBuildMin', 'e2e', 'concat', 'dist' ]);
 
 	grunt.registerTask('release', [ 'checkForChangedFiles', 'build', 'tag',
 			'bump' ]);
