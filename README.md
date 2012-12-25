@@ -30,7 +30,7 @@ Global options that can be provided:
 *  supportedLocales: specifies the supported locales (required)
 *  basePath: specifies base path of url (optional)
 
-#### defaultLocale has no global default and should always be provided!!
+#### 'defaultLocale' (has no global default and should always be provided!!)
 Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
@@ -40,7 +40,7 @@ yourApp.value('ngI18nConfig', {
     ... {add your other global defaults}
 });
 ```
-#### supportedLocales has no global default and should always be provided!!
+#### 'supportedLocales' (has no global default and should always be provided!!)
 Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
@@ -51,7 +51,7 @@ yourApp.value('ngI18nConfig', {
 });
 ```
 
-#### basePath (global default is 'i18n')
+#### 'basePath' (global default is 'i18n')
 Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
@@ -86,7 +86,8 @@ Config:
 var yourApp = angular.module('yourApp', ['ngI18n']);
 yourApp.value('ngI18nConfig', {
     defaultLocale: 'en',
-    supportedLocales: ['en', 'nl', 'fr-BE']
+    supportedLocales: ['en', 'nl', 'fr-BE'],
+    basePath: 'app/i18n'
 });
 ```
 ##### example - locale is default locale
