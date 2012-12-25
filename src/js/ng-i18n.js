@@ -5,37 +5,60 @@ angular.module('ngI18n', ['ngI18nService', 'ngI18nConfig'])
     .value('ngI18nVersion', '<%= pkg.version %>');
 
 angular.module('ngI18nService', [],function ($provide) {
-    $provide.factory('ngI18nResourceBundleLoader', ['$http', 'ngI18nConfig', 'ngI18nLocaleContextHolder',
-        function ($http, ngI18nConfig, ngI18nLocaleContextHolder) {
-            ngI18nConfig.basePath =  ngI18nConfig.basePath || 'i18n';
-            function get() {
-                var url = '/' + ngI18nConfig.basePath + '/resourceBundle_' + ngI18nLocaleContextHolder.getLocale() + '.json';
+
+    $provide.factory('ngI18nResourceBundle', ['$http', 'ngI18nConfig', '$window',
+        function ($http, ngI18nConfig, $window) {
+            ngI18nConfig.basePath = ngI18nConfig.basePath || 'i18n';
+            ngI18nConfig.supportedLocales = ngI18nConfig.supportedLocales || [];
+
+            function get(options) {
+                var url = '/' + ngI18nConfig.basePath + '/resourceBundle' + getSuffix(options) + '.json';
                 return $http.get(url);
             }
-            return { get:get};
-        }]);
-    $provide.factory('ngI18nLocaleContextHolder', ['ngI18nConfig', '$window',
-        function (ngI18nConfig, $window) {
-            var getLocale, setLocale, _locale;
 
-            setLocale = function (locale) {
-                _locale = locale;
-            };
-
-            getLocale = function () {
-                if (angular.isUndefined(_locale)) {
-                    return getLanguageFromNavigator();
+            function getSuffix(options) {
+                var locale = getLocale(options);
+                if(isDefaultLocale(locale)){
+                    return '';
                 }
-                return _locale;
-            };
+                if (isLocaleSupported(locale)) {
+                    return '_' + locale;
+                }
+                var language = getLanguageFromLocale(locale);
+                return isLocaleSupported(language) ? '_' + language :  '';
+            }
+
+            function isDefaultLocale(locale) {
+                return locale === ngI18nConfig.defaultLocale;
+            }
+
+            function getLanguageFromLocale(locale) {
+                return locale.split('-')[0];
+            }
+
+            function isLocaleSupported(locale) {
+                return indexOf(ngI18nConfig.supportedLocales, locale) != -1;
+            }
+
+            function indexOf(array, obj) {
+                if (array.indexOf) return array.indexOf(obj);
+
+                for (var i = 0; i < array.length; i++) {
+                    if (obj === array[i]) return i;
+                }
+                return -1;
+            }
+
+            function getLocale(options) {
+                var _options = options || {};
+                return _options.locale || getLanguageFromNavigator();
+            }
 
             function getLanguageFromNavigator() {
                 return $window.navigator.userLanguage || $window.navigator.language;
             }
 
-            return {
-                setLocale:setLocale,
-                getLocale:getLocale
-            };
+            return { get:get};
         }]);
+
 }).value('name', 'ngI18nService');

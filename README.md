@@ -13,47 +13,111 @@
 
 The source files can be found in the `src/js` directory.
 
-There are two services and a global config:
-* ngI18nLocaleContextHolder
-* ngI18nResourceBundleLoader
+There is a global config and one service:
 * ngI18nConfig
-
-### ngI18nLocaleContextHolder
-Holds the locale that ngI18nResourceBundleLoader uses to load the bundle.
-
-If the locale is not set, it will use the locale from the browser according to the following rule:
-```javascript
-$window.navigator.userLanguage || $window.navigator.language;
-```
-### ngI18nResourceBundleLoader
-It has one method `get`.
-It will load the resource bundle with the following url:
-```javascript
-var url = '/i18n/resourceBundle_' + ngI18nLocaleContextHolder.getLocale() + '.json';
-```
+* ngI18nResourceBundle
 
 ### ngI18nConfig
-You can declare global config in your app and override global defaults:
+You can declare 'ngI18nConfig' in your app as follows:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
 yourApp.value('ngI18nConfig', {
     ... {add your global defaults}
 });
 ```
-Global defaults that can be overridden:
-*  basePath: specifies base path of url
+Global options that can be provided:
+*  defaultLocale: specifies the default locale (required)
+*  supportedLocales: specifies the supported locales (required)
+*  basePath: specifies base path of url (optional)
 
-#### global default for basePath is 'i18n'
-You can override this:
+#### defaultLocale has no global default and should always be provided!!
+Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
 yourApp.value('ngI18nConfig', {
-    //without leading and trailing slashes
-    basePath: "base/path"
+    //defaultLocale should always be provided!!
+    defaultLocale: 'en'
+    ... {add your other global defaults}
+});
+```
+#### supportedLocales has no global default and should always be provided!!
+Example config:
+```javascript
+var yourApp = angular.module('yourApp', ['ngI18n']);
+yourApp.value('ngI18nConfig', {
+    //supportedLocales should always be provided!!
+    supportedLocales: ['en', 'nl']
+    ... {add your other global defaults}
+});
+```
+
+#### basePath (global default is 'i18n')
+Example config:
+```javascript
+var yourApp = angular.module('yourApp', ['ngI18n']);
+yourApp.value('ngI18nConfig', {
+    //without leading and trailing slashes (global default is i18n)
+    basePath: 'base/path'
     ... {add your other global defaults}
 });
 ```
 See also example app file `app.js`.
+
+### ngI18nResourceBundle
+It has one method `get`.
+It will load the resource bundle according to the following algorithm:
+```
+First determine locale
+	Locale provided with options?
+		Yes => use this locale
+		No => use locale form browser (`$window.navigator.userLanguage || $window.navigator.language`)
+
+Is this locale the default locale?
+	Yes => get default resourceBundle e.g. /i18n/resourceBundle.json
+	No => is this locale one of the supported locales?
+			Yes => get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en.json (locale => 'en')
+			No => is language from this locale supported?
+				Yes => get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en.json (locale => 'en-US')
+				No => fallback ot default resourceBundle e.g. /i18n/resourceBundle.json
+```
+#### examples
+Config:
+ ```javascript
+var yourApp = angular.module('yourApp', ['ngI18n']);
+yourApp.value('ngI18nConfig', {
+    defaultLocale: 'en',
+    supportedLocales: ['en', 'nl', 'fr-BE']
+});
+```
+##### example - locale is default locale
+```javascript
+ngI18nResourceBundle.get({locale: 'en'});
+```
+=> GET http://localhost:8000/app/i18n/resourceBundle.json
+
+##### example - locale is one of the supported locales
+```javascript
+ngI18nResourceBundle.get({locale: 'nl'});
+```
+=> GET http://localhost:8000/app/i18n/resourceBundle_nl.json
+
+##### example - language of locale is one of the supported locales
+```javascript
+ngI18nResourceBundle.get({locale: 'en-US'});
+```
+=> GET http://localhost:8000/app/i18n/resourceBundle_en.json
+
+##### example - locale with country is one of the supported locales
+```javascript
+ngI18nResourceBundle.get({locale: 'fr-BE'});
+```
+=> GET http://localhost:8000/app/i18n/resourceBundle_fr-BE.json
+
+##### example - locale not supported
+```javascript
+ngI18nResourceBundle.get({locale: 'de'});
+```
+=> GET http://localhost:8000/app/i18n/resourceBundle.json  (default resourceBundle)
 
 ## Example app
 You can find an example app in the app directory.

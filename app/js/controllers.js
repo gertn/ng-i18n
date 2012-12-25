@@ -1,7 +1,7 @@
 'use strict';
 
 /* Controllers */
-function MainCtrl(ngI18nLocaleContextHolder, ngI18nResourceBundleLoader, $scope) {
+function MainCtrl(ngI18nResourceBundle, $scope) {
 
     $scope.languages = [
         {locale:"en"},
@@ -11,14 +11,13 @@ function MainCtrl(ngI18nLocaleContextHolder, ngI18nResourceBundleLoader, $scope)
     $scope.language = $scope.languages[0];
 
     $scope.$watch('language', function (language) {
-        ngI18nLocaleContextHolder.setLocale(language.locale);
-        ngI18nResourceBundleLoader.get().success(function (resourceBundle) {
+        ngI18nResourceBundle.get({locale: language.locale}).success(function (resourceBundle) {
             $scope.resourceBundle = resourceBundle;
         });
     });
 
 }
-MyCtrl1.$inject = ['ngI18nLocaleContextHolder', 'ngI18nResourceBundleLoader', '$scope'];
+MainCtrl.$inject = ['ngI18nResourceBundle', '$scope'];
 
 function MyCtrl1() {
 }
