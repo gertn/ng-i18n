@@ -70,7 +70,7 @@ It will load the resource bundle according to the following algorithm:
 First determine locale
 	Locale provided with options?
 		Yes => use this locale
-		No => use locale form browser (`$window.navigator.userLanguage || $window.navigator.language`)
+		No => use locale form browser ($window.navigator.userLanguage || $window.navigator.language)
 
 Is this locale the default locale?
 	Yes => get default resourceBundle e.g. /i18n/resourceBundle.json
@@ -78,9 +78,9 @@ Is this locale the default locale?
 			Yes => get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en.json (locale => 'en')
 			No => is language from this locale supported?
 				Yes => get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en.json (locale => 'en-US')
-				No => fallback ot default resourceBundle e.g. /i18n/resourceBundle.json
+				No => fallback to default resourceBundle e.g. /i18n/resourceBundle.json
 ```
-#### examples
+#### Examples
 Config:
  ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
@@ -133,9 +133,3 @@ You can pick one of these options:
 
 Then navigate your browser to `http://localhost:<port>/app/index.html` to see the app running in
 your browser.
- 
-## Roadmap
-Make the module more configurable:
-* with ngI18nConfig
-* the get method should accept parameter object
-* fallback to default resourceBundle
