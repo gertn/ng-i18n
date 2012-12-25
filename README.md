@@ -90,6 +90,8 @@ yourApp.value('ngI18nConfig', {
     basePath: 'app/i18n'
 });
 ```
+Http Server running at http://localhost:8000/
+
 ##### example - locale is default locale
 ```javascript
 ngI18nResourceBundle.get({locale: 'en'});
