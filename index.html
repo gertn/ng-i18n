@@ -28,32 +28,254 @@
         </ul>
       </header>
       <section>
-        <h3>Welcome to GitHub Pages.</h3>
+        <p><a href="https://travis-ci.org/gertn/ng-i18n"><img src="https://travis-ci.org/gertn/ng-i18n.png" alt="Build Status"></a></p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<h1>Internationalization module for AngularJS</h1>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>This is an internationalization module for AngularJS, it allows you to localize your application with resource bundles.
+The file type for the resource bundle is '.json'.</p>
+
+<p>The source files can be found in the <code>dist</code> directory.</p>
+
+<h2>How to use</h2>
+
+<p>This example uses two locales, 'en' which is the default and 'nl'.
+For more configuration options take a look at the 'ngI18nConfig' section.</p>
+
+<h3>1. create your resource bundle files</h3>
+
+<p>You need to provide a default resource bundle for the default locale and one for locale 'nl'.
+Put these resource bundles in the 'i18n' directory.</p>
+
+<pre><code>i18n/
+    resourceBundle.json
+    resourceBundle_nl.json
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>example resourceBundle.json (for default locale)</p>
 
-<h3>Designer Templates</h3>
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="s2">"view_1"</span><span class="o">:</span><span class="s2">"First view"</span><span class="p">,</span>
+    <span class="s2">"view_2"</span><span class="o">:</span><span class="s2">"Second view"</span><span class="p">,</span>
+    <span class="s2">"language"</span><span class="o">:</span> <span class="s2">"Language"</span><span class="p">,</span>
+    <span class="s2">"text_view_1"</span><span class="o">:</span><span class="s2">"This is the first view, hopefully in English :)"</span><span class="p">,</span>
+    <span class="s2">"text_view_2"</span><span class="o">:</span><span class="s2">"This is the second view, hopefully in English :)"</span>
+<span class="p">}</span>
+</pre></div>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>example resourceBundle_nl.json (for locale 'nl')</p>
 
-<h3>Rather Drive Stick?</h3>
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="s2">"view_1"</span><span class="o">:</span><span class="s2">"Eerste view"</span><span class="p">,</span>
+    <span class="s2">"view_2"</span><span class="o">:</span><span class="s2">"Tweede view"</span><span class="p">,</span>
+    <span class="s2">"language"</span><span class="o">:</span> <span class="s2">"Taal"</span><span class="p">,</span>
+    <span class="s2">"text_view_1"</span><span class="o">:</span><span class="s2">"Dit is de eerste view, hopelijk in het Nederlands :)"</span><span class="p">,</span>
+    <span class="s2">"text_view_2"</span><span class="o">:</span><span class="s2">"Dit is de tweede view, hopelijk in het Nederlands :)"</span>
+<span class="p">}</span>
+</pre></div>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h3>2. add script tag after angular.js</h3>
 
-<h3>Authors and Contributors</h3>
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"angular.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"ng-i18n.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<h3>3. configure the module</h3>
 
-<h3>Support or Contact</h3>
+<div class="highlight"><pre>    <span class="kd">var</span> <span class="nx">yourApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'yourApp'</span><span class="p">,[</span><span class="s1">'ngI18n'</span><span class="p">,</span> <span class="p">...</span> <span class="p">{</span><span class="nx">other</span> <span class="nx">includes</span><span class="p">}]);</span>
+    <span class="nx">yourApp</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="s1">'ngI18nConfig'</span><span class="p">,</span> <span class="p">{</span>
+        <span class="nx">defaultLocale</span><span class="o">:</span> <span class="s1">'en'</span><span class="p">,</span>
+        <span class="nx">supportedLocales</span><span class="o">:</span> <span class="p">[</span><span class="s1">'en'</span><span class="p">,</span> <span class="s1">'nl'</span><span class="p">],</span>
+    <span class="p">});</span>
+</pre></div>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h3>4. add language switcher to your html</h3>
+
+<div class="highlight"><pre>    <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"switchLanguage"</span> <span class="na">ng-model=</span><span class="s">"language"</span> <span class="na">id=</span><span class="s">"switchLanguage"</span> <span class="na">ng-options=</span><span class="s">"l.locale for l in languages"</span><span class="nt">&gt;</span>
+</pre></div>
+
+<h3>5. load the resource bundle from your main controller and $watch for changes to the language model</h3>
+
+<div class="highlight"><pre>   <span class="kd">function</span> <span class="nx">MainCtrl</span><span class="p">(</span><span class="nx">ngI18nResourceBundle</span><span class="p">,</span> <span class="nx">$scope</span><span class="p">)</span> <span class="p">{</span>
+
+       <span class="nx">$scope</span><span class="p">.</span><span class="nx">languages</span> <span class="o">=</span> <span class="p">[</span>
+           <span class="p">{</span><span class="nx">locale</span><span class="o">:</span><span class="s2">"en"</span><span class="p">},</span>
+           <span class="p">{</span><span class="nx">locale</span><span class="o">:</span><span class="s2">"nl"</span><span class="p">}</span>
+       <span class="p">];</span>
+
+       <span class="nx">$scope</span><span class="p">.</span><span class="nx">language</span> <span class="o">=</span> <span class="nx">$scope</span><span class="p">.</span><span class="nx">languages</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+       <span class="nx">$scope</span><span class="p">.</span><span class="nx">$watch</span><span class="p">(</span><span class="s1">'language'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">language</span><span class="p">)</span> <span class="p">{</span>
+           <span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="nx">language</span><span class="p">.</span><span class="nx">locale</span><span class="p">}).</span><span class="nx">success</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resourceBundle</span><span class="p">)</span> <span class="p">{</span>
+               <span class="nx">$scope</span><span class="p">.</span><span class="nx">resourceBundle</span> <span class="o">=</span> <span class="nx">resourceBundle</span><span class="p">;</span>
+           <span class="p">});</span>
+       <span class="p">});</span>
+   <span class="p">}</span>
+   <span class="nx">MainCtrl</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'ngI18nResourceBundle'</span><span class="p">,</span> <span class="s1">'$scope'</span><span class="p">];</span>
+</pre></div>
+
+<h3>6. use the resourceBundle variable in your pages</h3>
+
+<div class="highlight"><pre>    <span class="nt">&lt;p&gt;</span>{{resourceBundle.text_view_1}}<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+
+<p>If you selected 'en' as language then '{{resourceBundle.text_view_1}}' will be displayed as:
+This is the first view, hopefully in English :)</p>
+
+<p>If you selected 'nl' as language then  it will be displayed as:
+Dit is de eerste view, hopelijk in het Nederlands :)</p>
+
+<h2>ngI18nConfig</h2>
+
+<p>You can declare 'ngI18nConfig' in your app as follows:</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">yourApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'yourApp'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'ngI18n'</span><span class="p">]);</span>
+<span class="nx">yourApp</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="s1">'ngI18nConfig'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="p">...</span> <span class="p">{</span><span class="nx">add</span> <span class="nx">your</span> <span class="nx">global</span> <span class="nx">defaults</span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>Global options that can be provided:</p>
+
+<ul>
+<li> defaultLocale: specifies the default locale (required and in lowercase)</li>
+<li> supportedLocales: specifies the supported locales (required and in lowercase)</li>
+<li> basePath: specifies base path of url (optional)</li>
+</ul><h3>'defaultLocale' (always in lowercase, has no global default and should always be provided!!)</h3>
+
+<p>Example config:</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">yourApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'yourApp'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'ngI18n'</span><span class="p">]);</span>
+<span class="nx">yourApp</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="s1">'ngI18nConfig'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="c1">//defaultLocale should be in lowercase and is required!!</span>
+    <span class="nx">defaultLocale</span><span class="o">:</span> <span class="s1">'en-us'</span>
+    <span class="p">...</span> <span class="p">{</span><span class="nx">add</span> <span class="nx">your</span> <span class="nx">other</span> <span class="nx">global</span> <span class="nx">defaults</span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+<h3>'supportedLocales' (always in lowercase, has no global default and should always be provided!!)</h3>
+
+<p>Example config:</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">yourApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'yourApp'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'ngI18n'</span><span class="p">]);</span>
+<span class="nx">yourApp</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="s1">'ngI18nConfig'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="c1">//supportedLocales should be in lowercase and is required!!</span>
+    <span class="nx">supportedLocales</span><span class="o">:</span> <span class="p">[</span><span class="s1">'en-us'</span><span class="p">,</span> <span class="s1">'nl'</span><span class="p">]</span>
+    <span class="p">...</span> <span class="p">{</span><span class="nx">add</span> <span class="nx">your</span> <span class="nx">other</span> <span class="nx">global</span> <span class="nx">defaults</span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+<h3>'basePath' (global default is 'i18n')</h3>
+
+<p>Example config:</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">yourApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'yourApp'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'ngI18n'</span><span class="p">]);</span>
+<span class="nx">yourApp</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="s1">'ngI18nConfig'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="c1">//without leading and trailing slashes (global default is i18n)</span>
+    <span class="nx">basePath</span><span class="o">:</span> <span class="s1">'base/path'</span>
+    <span class="p">...</span> <span class="p">{</span><span class="nx">add</span> <span class="nx">your</span> <span class="nx">other</span> <span class="nx">global</span> <span class="nx">defaults</span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+<h2>ngI18nResourceBundle service</h2>
+
+<p>It has one method <code>get(options)</code>.
+It will load the resource bundle according to the following algorithm:</p>
+
+<pre><code>First determine locale
+    Locale provided with options?
+        Yes =&gt; use this locale
+        No =&gt; use locale form browser ($window.navigator.userLanguage || $window.navigator.language)
+
+Is this locale the default locale?
+    Yes =&gt; get default resourceBundle e.g. /i18n/resourceBundle.json
+    No =&gt; is this locale one of the supported locales?
+            Yes =&gt; get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en.json (locale =&gt; 'en')
+            No =&gt; is language from this locale supported?
+                Yes =&gt;  is language from locale default locale?
+                    Yes =&gt; get default resourceBundle e.g. /i18n/resourceBundle.json
+                    No =&gt; get resourceBundle with language from locale suffix
+                            e.g. /i18n/resourceBundle_en.json (locale =&gt; 'en-US')
+                No =&gt; fallback to default resourceBundle e.g. /i18n/resourceBundle.json
+</code></pre>
+
+<p>Local options that can be provided:</p>
+
+<ul>
+<li> locale: specifies the locale for the resource bundle (optional)</li>
+<li> name: specifies the name for the resource bundle (optional)</li>
+</ul><h3>Examples</h3>
+
+<p>The examples use the following configuration:</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">yourApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'yourApp'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'ngI18n'</span><span class="p">]);</span>
+<span class="nx">yourApp</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="s1">'ngI18nConfig'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">defaultLocale</span><span class="o">:</span> <span class="s1">'en'</span><span class="p">,</span>
+    <span class="nx">supportedLocales</span><span class="o">:</span> <span class="p">[</span><span class="s1">'en'</span><span class="p">,</span> <span class="s1">'nl'</span><span class="p">,</span> <span class="s1">'fr-be'</span><span class="p">],</span>
+    <span class="nx">basePath</span><span class="o">:</span> <span class="s1">'app/i18n'</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>Http Server running at http://localhost:8000/</p>
+
+<h4>example - locale is default locale</h4>
+
+<div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'en'</span><span class="p">});</span>
+</pre></div>
+
+<p>=&gt; GET http://localhost:8000/app/i18n/resourceBundle.json</p>
+
+<h4>example - locale is one of the supported locales</h4>
+
+<div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'nl'</span><span class="p">});</span>
+</pre></div>
+
+<p>=&gt; GET http://localhost:8000/app/i18n/resourceBundle_nl.json</p>
+
+<h4>example - language of locale is one of the supported locales</h4>
+
+<div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'en-US'</span><span class="p">});</span>
+</pre></div>
+
+<p>=&gt; GET http://localhost:8000/app/i18n/resourceBundle_en.json</p>
+
+<h4>example - locale with country is one of the supported locales</h4>
+
+<div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'fr-BE'</span><span class="p">});</span>
+</pre></div>
+
+<p>=&gt; GET http://localhost:8000/app/i18n/resourceBundle_fr-be.json (lowercase)</p>
+
+<h4>example - locale not supported</h4>
+
+<div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'de'</span><span class="p">});</span>
+</pre></div>
+
+<p>=&gt; GET http://localhost:8000/app/i18n/resourceBundle.json  (default resourceBundle)</p>
+
+<h4>example - custom name</h4>
+
+<div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'en'</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">'customName'</span><span class="p">});</span>
+</pre></div>
+
+<p>=&gt; GET http://localhost:8000/app/i18n/customName.json</p>
+
+<h2>Example app</h2>
+
+<p>You can find an example app in the app directory.</p>
+
+<p>Look at <code>app.js</code>, <code>controller.js</code>, <code>index.html</code> and the two partials in the <code>partials</code> directory.</p>
+
+<h3>Running the example app</h3>
+
+<p>You can pick one of these options:</p>
+
+<ul>
+<li>serve this repository with your webserver</li>
+<li>install node.js and run <code>scripts/web-server.js</code>
+</li>
+</ul><p>Then navigate your browser to <code>http://localhost:&lt;port&gt;/app/index.html</code> to see the example app running in
+your browser.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/gertn">gertn</a></p>
