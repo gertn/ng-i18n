@@ -155,7 +155,7 @@ Is this locale the default locale?
 	No => is this locale one of the supported locales?
 			Yes => get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en.json (locale => 'en')
 			No => is language from this locale supported?
-				Yes => get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en.json (locale => 'en-US')
+				Yes => get resourceBundle with language from locale suffix e.g. /i18n/resourceBundle_en.json (locale => 'en-US')
 				No => fallback to default resourceBundle e.g. /i18n/resourceBundle.json
 ```
 ### Examples
