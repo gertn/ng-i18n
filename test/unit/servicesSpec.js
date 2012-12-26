@@ -89,6 +89,11 @@ describe('ngI18nService - ', function () {
                 assertResourceBundleLoadedForSupportedLocales('nl-be', 'nl');
             });
 
+            it("should always get resourceBundle in lowercase", function () {
+                ngI18nConfig.supportedLocales = ['nl-be'];
+                assertResourceBundleLoadedForSupportedLocales('nl-BE', 'nl-be');
+            });
+
             function assertResourceBundleLoadedForSupportedLocales(localeForGet, localeForUrl) {
                 $httpBackend.when("GET", '/i18n/resourceBundle_' + localeForUrl + '.json').respond(expectedResourceBundle);
 
@@ -104,8 +109,11 @@ describe('ngI18nService - ', function () {
 
         describe('name local option - ', function () {
             it("should be able to configure name of resource bundle", function () {
+                ngI18nConfig.supportedLocales = ['nl', 'en'];
+                ngI18nConfig.defaultLocale = 'nl';
+
                 var name = 'customName';
-                assertResourceBundleLoadedWithCustomName({name: name});
+                assertResourceBundleLoadedWithCustomName({locale: 'nl', name: name});
             });
 
             function assertResourceBundleLoadedWithCustomName(options) {
@@ -127,6 +135,12 @@ describe('ngI18nService - ', function () {
                 ngI18nConfig.supportedLocales = ['nl', 'en'];
                 ngI18nConfig.defaultLocale = 'nl';
                 assertDefaultResourceBundleLoaded('nl');
+            });
+
+            it('should get default resourceBundle when locale matches lowercase default locale', function () {
+                ngI18nConfig.supportedLocales = ['nl-be', 'en'];
+                ngI18nConfig.defaultLocale = 'nl-be';
+                assertDefaultResourceBundleLoaded('nl-BE');
             });
         });
 
@@ -154,6 +168,7 @@ describe('ngI18nService - ', function () {
 
             expect(resourceBundle).toEqual(expectedResourceBundle);
         }
+
     });
 
 });

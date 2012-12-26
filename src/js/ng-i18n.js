@@ -12,10 +12,9 @@ angular.module('ngI18nService', [],function ($provide) {
             ngI18nConfig.supportedLocales = ngI18nConfig.supportedLocales || [];
 
             function get(options) {
-                //noinspection JSDuplicatedDeclaration
-                var options = options || {};
-                var resourceBundleName = options.name || 'resourceBundle';
-                var url = '/' + ngI18nConfig.basePath + '/' + resourceBundleName + getSuffix(options) + '.json';
+                var _options = options || {};
+                var resourceBundleName = _options.name || 'resourceBundle';
+                var url = '/' + ngI18nConfig.basePath + '/' + resourceBundleName + getSuffix(_options).toLowerCase() + '.json';
                 return $http.get(url);
             }
 
@@ -32,7 +31,7 @@ angular.module('ngI18nService', [],function ($provide) {
             }
 
             function isDefaultLocale(locale) {
-                return locale === ngI18nConfig.defaultLocale;
+                return locale.toLowerCase() === ngI18nConfig.defaultLocale;
             }
 
             function getLanguageFromLocale(locale) {
@@ -40,7 +39,7 @@ angular.module('ngI18nService', [],function ($provide) {
             }
 
             function isLocaleSupported(locale) {
-                return indexOf(ngI18nConfig.supportedLocales, locale) != -1;
+                return indexOf(ngI18nConfig.supportedLocales, locale.toLowerCase()) != -1;
             }
 
             function indexOf(array, obj) {

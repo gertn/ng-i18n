@@ -107,11 +107,11 @@ yourApp.value('ngI18nConfig', {
 });
 ```
 Global options that can be provided:
-*  defaultLocale: specifies the default locale (required)
-*  supportedLocales: specifies the supported locales (required)
+*  defaultLocale: specifies the default locale (required and in lowercase)
+*  supportedLocales: specifies the supported locales (required and in lowercase)
 *  basePath: specifies base path of url (optional)
 
-### 'defaultLocale' (has no global default and should always be provided!!)
+### 'defaultLocale' (in lowercase, has no global default and should always be provided!!)
 Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
@@ -121,7 +121,7 @@ yourApp.value('ngI18nConfig', {
     ... {add your other global defaults}
 });
 ```
-### 'supportedLocales' (has no global default and should always be provided!!)
+### 'supportedLocales' (in lowercase, has no global default and should always be provided!!)
 Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
@@ -142,7 +142,6 @@ yourApp.value('ngI18nConfig', {
     ... {add your other global defaults}
 });
 ```
-See also example app file `app.js`.
 
 ## ngI18nResourceBundle service
 It has one method `get(options)`.
@@ -173,7 +172,7 @@ The examples use the following configuration:
 var yourApp = angular.module('yourApp', ['ngI18n']);
 yourApp.value('ngI18nConfig', {
     defaultLocale: 'en',
-    supportedLocales: ['en', 'nl', 'fr-BE'],
+    supportedLocales: ['en', 'nl', 'fr-be'],
     basePath: 'app/i18n'
 });
 ```
@@ -201,7 +200,7 @@ ngI18nResourceBundle.get({locale: 'en-US'});
 ```javascript
 ngI18nResourceBundle.get({locale: 'fr-BE'});
 ```
-=> GET http://localhost:8000/app/i18n/resourceBundle_fr-BE.json
+=> GET http://localhost:8000/app/i18n/resourceBundle_fr-be.json (lowercase)
 
 #### example - locale not supported
 ```javascript
