@@ -2,6 +2,7 @@
 
 #Internationalization module for AngularJS
 This is an internationalization module for AngularJS, it allows you to localize your application with resource bundles.
+The file type for the resource bundle is '.json'.
 
 The source files can be found in the `src/js` directory.
 The release files can be found in the `dist` directory.
@@ -12,6 +13,8 @@ For more configuration options take a look at the 'ngI18nConfig' section.
 
 ### 1. create your resource bundle files
 You need to provide a default resource bundle for the default locale and one for locale 'nl'.
+Put these resource bundles in the 'i18n' directory.
+
 ```
 i18n/
     resourceBundle.json
@@ -155,11 +158,17 @@ Is this locale the default locale?
 	No => is this locale one of the supported locales?
 			Yes => get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en.json (locale => 'en')
 			No => is language from this locale supported?
-				Yes => get resourceBundle with language from locale suffix e.g. /i18n/resourceBundle_en.json (locale => 'en-US')
+				Yes => get resourceBundle with language from locale suffix
+				        e.g. /i18n/resourceBundle_en.json (locale => 'en-US')
 				No => fallback to default resourceBundle e.g. /i18n/resourceBundle.json
 ```
+
+Local options that can be provided:
+*  locale: specifies the locale for the resource bundle (optional)
+*  name: specifies the name for the resource bundle (optional)
+
 ### Examples
-Config:
+The examples use the following configuration:
  ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
 yourApp.value('ngI18nConfig', {
@@ -199,6 +208,12 @@ ngI18nResourceBundle.get({locale: 'fr-BE'});
 ngI18nResourceBundle.get({locale: 'de'});
 ```
 => GET http://localhost:8000/app/i18n/resourceBundle.json  (default resourceBundle)
+
+#### example - custom name
+```javascript
+ngI18nResourceBundle.get({locale: 'en', name: 'customName'});
+```
+=> GET http://localhost:8000/app/i18n/customName.json
 
 ## Example app
 You can find an example app in the app directory.

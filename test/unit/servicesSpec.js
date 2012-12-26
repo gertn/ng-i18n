@@ -1,6 +1,6 @@
 'use strict';
 
-describe('ngI18nService', function () {
+describe('ngI18nService - ', function () {
     var ngI18nConfig, windowStub;
     beforeEach(function () {
 
@@ -24,7 +24,7 @@ describe('ngI18nService', function () {
 
     });
 
-    describe('ngI18nResourceBundle', function () {
+    describe('ngI18nResourceBundle - ', function () {
         var $httpBackend, ngI18nResourceBundle, expectedResourceBundle, resourceBundle;
 
         beforeEach(inject(function ($injector) {
@@ -70,7 +70,7 @@ describe('ngI18nService', function () {
             }
         });
 
-        describe('base path', function () {
+        describe('base path global option - ', function () {
             it("should be able to configure base path for url", function () {
                 ngI18nConfig.basePath = 'new/base/path';
                 var basePath = 'new/base/path';
@@ -78,7 +78,7 @@ describe('ngI18nService', function () {
             });
         });
 
-        describe('supported locales', function () {
+        describe('supported locales global option - ', function () {
             it("should be able to fallback to default resourceBundle when locale not supported", function () {
                 ngI18nConfig.supportedLocales = ['nl', 'en'];
                 assertDefaultResourceBundleLoaded('fr');
@@ -102,7 +102,27 @@ describe('ngI18nService', function () {
             }
         });
 
-        describe('default locale', function () {
+        describe('name local option - ', function () {
+            it("should be able to configure name of resource bundle", function () {
+                var name = 'customName';
+                assertResourceBundleLoadedWithCustomName({name: name});
+            });
+
+            function assertResourceBundleLoadedWithCustomName(options) {
+                $httpBackend.when("GET", '/i18n/' + options.name  + '.json').respond(expectedResourceBundle);
+
+                ngI18nResourceBundle.get(options).success(function (data) {
+                    resourceBundle = data;
+                });
+
+                $httpBackend.flush();
+
+                expect(resourceBundle).toEqual(expectedResourceBundle);
+            }
+        });
+
+
+        describe('default locale - ', function () {
             it('should get default resourceBundle when locale matches default locale', function () {
                 ngI18nConfig.supportedLocales = ['nl', 'en'];
                 ngI18nConfig.defaultLocale = 'nl';
