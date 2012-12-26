@@ -11,24 +11,31 @@ angular.module('ngI18nService', [],function ($provide) {
             ngI18nConfig.basePath = ngI18nConfig.basePath || 'i18n';
             ngI18nConfig.supportedLocales = ngI18nConfig.supportedLocales || [];
 
-            //TODO simplify algorithm
             function get(options) {
                 var _options = options || {};
                 var resourceBundleName = _options.name || 'resourceBundle';
-                var url = '/' + ngI18nConfig.basePath + '/' + resourceBundleName + getSuffix(_options).toLowerCase() + '.json';
+                var url = '/' + ngI18nConfig.basePath + '/' + resourceBundleName + getLocaleOrLanguageFromLocaleSuffix(_options).toLowerCase() + '.json';
                 return $http.get(url);
             }
 
-            function getSuffix(options) {
+            function getLocaleOrLanguageFromLocaleSuffix(options) {
                 var locale = getLocale(options);
-                if(isDefaultLocale(locale)){
-                    return '';
+                var suffix = determineSuffixFrom(locale);
+                if(angular.isUndefined(suffix)){
+                    var language = getLanguageFromLocale(locale);
+                    suffix = determineSuffixFrom(language);
                 }
-                if (isLocaleSupported(locale)) {
-                    return '_' + locale;
+                return angular.isUndefined(suffix) ? '' : suffix;
+            }
+
+            function determineSuffixFrom(localeOrLanguage) {
+                var suffix;
+                if(isDefaultLocale(localeOrLanguage)){
+                    suffix = '';
+                }  else  if (isLocaleSupported(localeOrLanguage)) {
+                    suffix = '_' + localeOrLanguage;
                 }
-                var language = getLanguageFromLocale(locale);
-                return isLocaleSupported(language) ? (isDefaultLocale(language) ? '' : '_' + language) :  '';
+                return suffix;
             }
 
             function isDefaultLocale(locale) {
