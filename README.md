@@ -1,23 +1,101 @@
 [![Build Status](https://travis-ci.org/gertn/ng-i18n.png)](https://travis-ci.org/gertn/ng-i18n)
 
 #Internationalization module for AngularJS
+This is an internationalization module for AngularJS, it allows you to localize your application with resource bundles.
+
+The source files can be found in the `src/js` directory.
+The release files can be found in the `dist` directory.
+
 ## How to use
+This example uses two locales, 'en' which is the default and 'nl'.
+For more configuration options take a look at the 'ngI18nConfig' section.
+
+### 1. create your resource bundle files
+You need to provide a default resource bundle for the default locale and one for locale 'nl'.
+```
+i18n/
+    resourceBundle.json
+    resourceBundle_nl.json
+```
+
+example resourceBundle.json (for default locale)
+```javascript
+{
+    "view_1":"First view",
+    "view_2":"Second view",
+    "language": "Language",
+    "text_view_1":"This is the first view, hopefully in English :)",
+    "text_view_2":"This is the second view, hopefully in English :)"
+}
+```
+
+example resourceBundle_nl.json (for locale 'nl')
+```javascript
+{
+    "view_1":"Eerste view",
+    "view_2":"Tweede view",
+    "language": "Taal",
+    "text_view_1":"Dit is de eerste view, hopelijk in het Nederlands :)",
+    "text_view_2":"Dit is de tweede view, hopelijk in het Nederlands :)"
+}
+```
+
+### 2. add script tag after angular.js
 
 ```html
 <script type="text/javascript" src="angular.js"></script>
 <script type="text/javascript" src="ng-i18n.js"></script>
-<script>
-    angular.module('yourApp',['ngI18n', ... {other includes}]);
-</script>
 ```
 
-The source files can be found in the `src/js` directory.
+### 3. configure the module
 
-There is a global config and one service:
-* ngI18nConfig
-* ngI18nResourceBundle
+```javascript
+    var yourApp = angular.module('yourApp',['ngI18n', ... {other includes}]);
+    yourApp.value('ngI18nConfig', {
+        defaultLocale: 'en',
+        supportedLocales: ['en', 'nl'],
+    });
+```
 
-### ngI18nConfig
+### 4. add language switcher to your html
+
+```html
+    <select name="switchLanguage" ng-model="language" id="switchLanguage" ng-options="l.locale for l in languages">
+```
+
+### 5. load the resource bundle from your main controller and $watch for changes to the language model
+
+```javascript
+   function MainCtrl(ngI18nResourceBundle, $scope) {
+
+       $scope.languages = [
+           {locale:"en"},
+           {locale:"nl"}
+       ];
+
+       $scope.language = $scope.languages[0];
+
+       $scope.$watch('language', function (language) {
+           ngI18nResourceBundle.get({locale: language.locale}).success(function (resourceBundle) {
+               $scope.resourceBundle = resourceBundle;
+           });
+       });
+   }
+   MainCtrl.$inject = ['ngI18nResourceBundle', '$scope'];
+```
+### 6. use the resourceBundle variable in your pages
+
+```html
+    <p>{{resourceBundle.text_view_1}}</p>
+```
+
+If you selected 'en' as language then '{{resourceBundle.text_view_1}}' will be displayed as:
+This is the first view, hopefully in English :)
+
+If you selected 'nl' as language then  it will be displayed as:
+Dit is de eerste view, hopelijk in het Nederlands :)
+
+## ngI18nConfig
 You can declare 'ngI18nConfig' in your app as follows:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
@@ -30,7 +108,7 @@ Global options that can be provided:
 *  supportedLocales: specifies the supported locales (required)
 *  basePath: specifies base path of url (optional)
 
-#### 'defaultLocale' (has no global default and should always be provided!!)
+### 'defaultLocale' (has no global default and should always be provided!!)
 Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
@@ -40,7 +118,7 @@ yourApp.value('ngI18nConfig', {
     ... {add your other global defaults}
 });
 ```
-#### 'supportedLocales' (has no global default and should always be provided!!)
+### 'supportedLocales' (has no global default and should always be provided!!)
 Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
@@ -51,7 +129,7 @@ yourApp.value('ngI18nConfig', {
 });
 ```
 
-#### 'basePath' (global default is 'i18n')
+### 'basePath' (global default is 'i18n')
 Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
@@ -63,8 +141,8 @@ yourApp.value('ngI18nConfig', {
 ```
 See also example app file `app.js`.
 
-### ngI18nResourceBundle
-It has one method `get`.
+## ngI18nResourceBundle service
+It has one method `get(options)`.
 It will load the resource bundle according to the following algorithm:
 ```
 First determine locale
@@ -80,7 +158,7 @@ Is this locale the default locale?
 				Yes => get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en.json (locale => 'en-US')
 				No => fallback to default resourceBundle e.g. /i18n/resourceBundle.json
 ```
-#### Examples
+### Examples
 Config:
  ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
@@ -92,31 +170,31 @@ yourApp.value('ngI18nConfig', {
 ```
 Http Server running at http://localhost:8000/
 
-##### example - locale is default locale
+#### example - locale is default locale
 ```javascript
 ngI18nResourceBundle.get({locale: 'en'});
 ```
 => GET http://localhost:8000/app/i18n/resourceBundle.json
 
-##### example - locale is one of the supported locales
+#### example - locale is one of the supported locales
 ```javascript
 ngI18nResourceBundle.get({locale: 'nl'});
 ```
 => GET http://localhost:8000/app/i18n/resourceBundle_nl.json
 
-##### example - language of locale is one of the supported locales
+#### example - language of locale is one of the supported locales
 ```javascript
 ngI18nResourceBundle.get({locale: 'en-US'});
 ```
 => GET http://localhost:8000/app/i18n/resourceBundle_en.json
 
-##### example - locale with country is one of the supported locales
+#### example - locale with country is one of the supported locales
 ```javascript
 ngI18nResourceBundle.get({locale: 'fr-BE'});
 ```
 => GET http://localhost:8000/app/i18n/resourceBundle_fr-BE.json
 
-##### example - locale not supported
+#### example - locale not supported
 ```javascript
 ngI18nResourceBundle.get({locale: 'de'});
 ```
@@ -125,7 +203,7 @@ ngI18nResourceBundle.get({locale: 'de'});
 ## Example app
 You can find an example app in the app directory.
 
-Look at `controller.js`, `index.html` and the two partials in the `partials` directory.
+Look at `app.js`, `controller.js`, `index.html` and the two partials in the `partials` directory.
 
 ### Running the example app
 
@@ -134,5 +212,5 @@ You can pick one of these options:
 * serve this repository with your webserver
 * install node.js and run `scripts/web-server.js`
 
-Then navigate your browser to `http://localhost:<port>/app/index.html` to see the app running in
+Then navigate your browser to `http://localhost:<port>/app/index.html` to see the example app running in
 your browser.
