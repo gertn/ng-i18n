@@ -1,12 +1,19 @@
 'use strict';
 
 /* Controllers */
-function MainCtrl(ngI18nResourceBundle, $scope) {
+function MainCtrl(ngI18nResourceBundle, ngI18nConfig, $scope) {
 
     $scope.languages = [
         {locale:"en"},
-        {locale:"nl"}
+        {locale:"nl"},
+        {locale:"en-US"},
+        {locale:"nl-BE"},
+        {locale:"nl-nl"},
+        {locale:"nl-be"}
     ];
+
+    $scope.supportedLocales = ngI18nConfig.supportedLocales;
+    $scope.defaultLocale = ngI18nConfig.defaultLocale;
 
     $scope.language = $scope.languages[0];
 
@@ -17,7 +24,7 @@ function MainCtrl(ngI18nResourceBundle, $scope) {
     });
 
 }
-MainCtrl.$inject = ['ngI18nResourceBundle', '$scope'];
+MainCtrl.$inject = ['ngI18nResourceBundle', 'ngI18nConfig', '$scope'];
 
 function MyCtrl1() {
 }

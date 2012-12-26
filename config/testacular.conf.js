@@ -6,8 +6,12 @@ files = [
   'vendor/angular/angular.js',
   'vendor/angular/angular-*.js',
   'test/lib/angular/angular-mocks.js',
-  'src/js/ng-i18n.js',
+  'src/js/ng-i18n*.js',
   'test/unit/**/*.js'
+];
+
+exclude = [
+    'src/js/ng-i18n*.min.js'
 ];
 
 autoWatch = false;

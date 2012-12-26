@@ -6,7 +6,7 @@ files = [
   'vendor/angular/angular.js',
   'vendor/angular/angular-*.js',
   'test/lib/angular/angular-mocks.js',
-  'src/js/ng-i18n.min.js',
+  'src/js/ng-i18n*.min.js',
   'test/unit/**/*.js'
 ];
 

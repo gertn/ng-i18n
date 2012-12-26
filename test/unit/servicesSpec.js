@@ -129,7 +129,6 @@ describe('ngI18nService - ', function () {
             }
         });
 
-
         describe('default locale - ', function () {
             it('should get default resourceBundle when locale matches default locale', function () {
                 ngI18nConfig.supportedLocales = ['nl', 'en'];
@@ -140,6 +139,12 @@ describe('ngI18nService - ', function () {
             it('should get default resourceBundle when locale matches lowercase default locale', function () {
                 ngI18nConfig.supportedLocales = ['nl-be', 'en'];
                 ngI18nConfig.defaultLocale = 'nl-be';
+                assertDefaultResourceBundleLoaded('nl-BE');
+            });
+
+            it('should get default resourceBundle when language of locale matches default locale', function () {
+                ngI18nConfig.supportedLocales = ['nl', 'en'];
+                ngI18nConfig.defaultLocale = 'nl';
                 assertDefaultResourceBundleLoaded('nl-BE');
             });
         });

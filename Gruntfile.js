@@ -55,11 +55,25 @@ module.exports = function(grunt) {
 					buildDir : '<%= targetdir %>'
 				},
 				dist : {
-					file2 : {
-						src : '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>.min.js',
+					file_src : {
+						src : '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>-<%= pkg.version %>.js',
+						dest : '<%= distdir %>/<%= pkg.name %>-<%= pkg.version %>.js'
+					},
+                    file_src_min : {
+						src : '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>-<%= pkg.version %>.min.js',
 						dest : '<%= distdir %>/<%= pkg.name %>-<%= pkg.version %>.min.js'
 					}
-				}
+				},
+                renameSrcFilesWithVersion : {
+                    src : {
+                        src : '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>.js',
+                        to : '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>-<%= pkg.version %>.js'
+                    },
+                    src_min : {
+                        src : '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>.min.js',
+                        to : '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>-<%= pkg.version %>.min.js'
+                    }
+            }
 			});
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -69,16 +83,24 @@ module.exports = function(grunt) {
 	grunt.loadTasks('build');
 
 	grunt.registerMultiTask('dist', 'Copy files to distdir', function() {
-		grunt.log.write('Dist file copy from "' + this.data.src + '" to "'
-				+ this.data.dest + '"');
-		grunt.file.copy(this.data.src, this.data.dest);
-		grunt.log.ok();
-	});
+        grunt.log.write('Dist file copy from "' + this.data.src + '" to "'
+            + this.data.dest + '"');
+        grunt.file.copy(this.data.src, this.data.dest);
+        grunt.log.ok();
+    });
+
+    grunt.registerMultiTask('renameSrcFilesWithVersion', 'rename files', function() {
+        grunt.log.write('rename file from "' + this.data.src + '" to "'
+            + this.data.to + '"');
+        grunt.file.copy(this.data.src, this.data.to);
+        grunt.file.delete(this.data.src) ;
+        grunt.log.ok();
+    });
 
 	// Default task(s).
 	grunt.registerTask('default', [ 'build' ]);
 
-	grunt.registerTask('build', [ 'clean', 'uglify', 'copyRootdirs',
+	grunt.registerTask('build', [ 'clean', 'uglify', 'copyRootdirs', 'renameSrcFilesWithVersion',
 			'testBuild', 'testBuildMin', 'e2e', 'concat', 'dist' ]);
 
 	grunt.registerTask('release', [ 'checkForChangedFiles', 'build', 'tag',

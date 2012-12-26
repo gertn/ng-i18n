@@ -4,8 +4,7 @@
 This is an internationalization module for AngularJS, it allows you to localize your application with resource bundles.
 The file type for the resource bundle is '.json'.
 
-The source files can be found in the `src/js` directory.
-The release files can be found in the `dist` directory.
+The source files can be found in the `dist` directory.
 
 ## How to use
 This example uses two locales, 'en' which is the default and 'nl'.

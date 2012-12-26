@@ -21,12 +21,12 @@ describe('my app', function() {
         });
 
 
-        it('should render view1 when user navigates to /view1', function() {
+        it('should render view1 in english when user navigates to /view1', function() {
             expect(element('[ng-view] p:first').text()).
                 toMatch('first view');
         });
 
-        it('should render view1 when user navigates to /view1', function() {
+        it('should render view1 in dutch when user switches language to nl', function() {
             select('language').option('nl');
             expect(element('[ng-view] p:first').text()).
                 toMatch('eerste view');
@@ -42,12 +42,12 @@ describe('my app', function() {
         });
 
 
-        it('should render view2 when user navigates to /view2', function() {
+        it('should render view2 in english when user navigates to /view2', function() {
             expect(element('[ng-view] p:first').text()).
                 toMatch('second view');
         });
 
-        it('should render view1 when user navigates to /view1', function() {
+        it('should render view2 in dutch when user switches language to nl', function() {
             select('language').option('nl');
             expect(element('[ng-view] p:first').text()).
                 toMatch('tweede view');

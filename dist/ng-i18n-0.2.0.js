@@ -1,9 +1,3 @@
-/**
- * I18n module for AngularJs
- * @version v0.2.0 - 2012-12-26
- * @link http://ng-i18n.github.com
- * @license MIT License, http://www.opensource.org/licenses/MIT
- */
 'use strict';
 
 angular.module('ngI18nConfig', []).value('ngI18nConfig', {});
@@ -17,6 +11,7 @@ angular.module('ngI18nService', [],function ($provide) {
             ngI18nConfig.basePath = ngI18nConfig.basePath || 'i18n';
             ngI18nConfig.supportedLocales = ngI18nConfig.supportedLocales || [];
 
+            //TODO simplify algorithm
             function get(options) {
                 var _options = options || {};
                 var resourceBundleName = _options.name || 'resourceBundle';
@@ -33,7 +28,7 @@ angular.module('ngI18nService', [],function ($provide) {
                     return '_' + locale;
                 }
                 var language = getLanguageFromLocale(locale);
-                return isLocaleSupported(language) ? '_' + language :  '';
+                return isLocaleSupported(language) ? (isDefaultLocale(language) ? '' : '_' + language) :  '';
             }
 
             function isDefaultLocale(locale) {

@@ -11,6 +11,7 @@ angular.module('ngI18nService', [],function ($provide) {
             ngI18nConfig.basePath = ngI18nConfig.basePath || 'i18n';
             ngI18nConfig.supportedLocales = ngI18nConfig.supportedLocales || [];
 
+            //TODO simplify algorithm
             function get(options) {
                 var _options = options || {};
                 var resourceBundleName = _options.name || 'resourceBundle';
@@ -27,7 +28,7 @@ angular.module('ngI18nService', [],function ($provide) {
                     return '_' + locale;
                 }
                 var language = getLanguageFromLocale(locale);
-                return isLocaleSupported(language) ? '_' + language :  '';
+                return isLocaleSupported(language) ? (isDefaultLocale(language) ? '' : '_' + language) :  '';
             }
 
             function isDefaultLocale(locale) {

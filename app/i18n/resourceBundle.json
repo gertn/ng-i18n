@@ -2,6 +2,10 @@
     "view_1":"First view",
     "view_2":"Second view",
     "language": "Language",
+    "example": "example",
+    "supportedLocales": "supported locales",
+    "defaultLocale": "default locale",
+    "resourceBundle": "app/i18n/resourceBundle.json (default)",
     "text_view_1":"This is the first view, hopefully in English :)",
     "text_view_2":"This is the second view, hopefully in English :)"
 }

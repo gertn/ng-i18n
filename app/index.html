@@ -15,19 +15,19 @@
     </li>
 </ul>
 
-<div ng-view ng-controller="MyCtrl1"></div>
+<div ng-view></div>
 
-<div>ngI18n demo app: v<span app-version></span></div>
+<div>{{resourceBundle.defaultLocale}}: "{{defaultLocale}}"</div>
+<div>{{resourceBundle.supportedLocales}}: {{supportedLocales}}</div>
+<div>resourceBundle: {{resourceBundle.resourceBundle}}</div>
+<div>ngI18n {{resourceBundle.example}} app</div>
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
 -->
 <script src="lib/angular/angular.js"></script>
 <script src="js/app.js"></script>
-<script src="js/services.js"></script>
 <script src="js/controllers.js"></script>
-<script src="js/filters.js"></script>
-<script src="js/directives.js"></script>
 <script src="../src/js/ng-i18n.js"></script>
 </body>
 </html>
