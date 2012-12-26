@@ -111,23 +111,23 @@ Global options that can be provided:
 *  supportedLocales: specifies the supported locales (required and in lowercase)
 *  basePath: specifies base path of url (optional)
 
-### 'defaultLocale' (in lowercase, has no global default and should always be provided!!)
+### 'defaultLocale' (always in lowercase, has no global default and should always be provided!!)
 Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
 yourApp.value('ngI18nConfig', {
-    //defaultLocale should always be provided!!
-    defaultLocale: 'en'
+    //defaultLocale should be in lowercase and is required!!
+    defaultLocale: 'en-us'
     ... {add your other global defaults}
 });
 ```
-### 'supportedLocales' (in lowercase, has no global default and should always be provided!!)
+### 'supportedLocales' (always in lowercase, has no global default and should always be provided!!)
 Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
 yourApp.value('ngI18nConfig', {
-    //supportedLocales should always be provided!!
-    supportedLocales: ['en', 'nl']
+    //supportedLocales should be in lowercase and is required!!
+    supportedLocales: ['en-us', 'nl']
     ... {add your other global defaults}
 });
 ```

@@ -10,9 +10,9 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
 }]);
 
 myApp.value('ngI18nConfig', {
-    //defaultLocale should always be provided!!
+    //defaultLocale should be in lowercase and is required!!
     defaultLocale: 'en',
-    //supportedLocales should always be provided!!
+    //supportedLocales should be in lowercase and is required!!
     supportedLocales: ['en', 'nl'],
     //without leading and trailing slashes
     basePath:'app/i18n'
