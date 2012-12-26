@@ -6,6 +6,7 @@
 * Renamed ngI18nResourceBundleLoader to ngI18nResourceBundle
 * Removed ngI18nLocaleContextHolder
 * Implemented algorithm to get resourceBundle
+* added local options locale and name
 
 ### v0.1.0
 
