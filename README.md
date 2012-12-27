@@ -2,16 +2,19 @@
 
 #Internationalization module for AngularJS
 This is an internationalization module for AngularJS, it allows you to localize your application with resource bundles.
+<br>
 The file type for the resource bundle is '.json'.
-
+<br>
 The source files can be found in the `dist` directory.
 
 ## How to use
 This example uses two locales, 'en' which is the default and 'nl'.
+<br>
 For more configuration options take a look at the 'ngI18nConfig' section.
 
 ### 1. create your resource bundle files
 You need to provide a default resource bundle for the default locale and one for locale 'nl'.
+<br>
 Put these resource bundles in the 'i18n' directory.
 
 ```
@@ -91,10 +94,10 @@ example resourceBundle_nl.json (for locale 'nl')
     <p>{{resourceBundle.text_view_1}}</p>
 ```
 
-If you selected 'en' as language then '{{resourceBundle.text_view_1}}' will be displayed as:
+If you selected 'en' as language then '{{resourceBundle.text_view_1}}' will be displayed as:  <br>
 This is the first view, hopefully in English :)
-
-If you selected 'nl' as language then  it will be displayed as:
+<br>
+If you selected 'nl' as language then  it will be displayed as: <br>
 Dit is de eerste view, hopelijk in het Nederlands :)
 
 ## ngI18nConfig
@@ -145,6 +148,7 @@ yourApp.value('ngI18nConfig', {
 
 ### 'cache' (global default is false)
 When the cache is enabled, $http stores the response from the server (the resource bundle) in local cache.
+<br>
 Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
@@ -157,6 +161,7 @@ yourApp.value('ngI18nConfig', {
 
 ## ngI18nResourceBundle service
 It has one method `get(options)`.
+<br>
 It will load the resource bundle according to the following algorithm:
 ```
 First determine locale
@@ -229,6 +234,11 @@ ngI18nResourceBundle.get({locale: 'en', name: 'customName'});
 ```
 => GET http://localhost:8000/app/i18n/customName.json
 
+```javascript
+ngI18nResourceBundle.get({locale: 'nl', name: 'customName'});
+```
+=> GET http://localhost:8000/app/i18n/customName_nl.json
+
 #### example - caching
 ```javascript
 //first call
@@ -237,11 +247,12 @@ ngI18nResourceBundle.get({locale: 'en'});
 ngI18nResourceBundle.get({locale: 'en'});
 ```
 first call => GET http://localhost:8000/app/i18n/resourceBundle.json
+<br>
 second call => no call, the resource bundle is retrieved from local cache
 
 ## Example app
 You can find an example app in the app directory.
-
+<br>
 Look at `app.js`, `controller.js`, `index.html` and the two partials in the `partials` directory.
 
 ### Running the example app
