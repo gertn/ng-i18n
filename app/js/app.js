@@ -14,6 +14,8 @@ myApp.value('ngI18nConfig', {
     defaultLocale: 'en',
     //supportedLocales should be in lowercase and is required!!
     supportedLocales: ['en', 'nl', 'nl-be'],
-    //without leading and trailing slashes
-    basePath:'app/i18n'
+    //without leading and trailing slashes, default is i18n
+    basePath:'app/i18n',
+    //default is false
+    cache: true
 });

@@ -78,6 +78,64 @@ describe('ngI18nService - ', function () {
             });
         });
 
+        describe('caching global option - ', function () {
+
+            it("should not cache resourceBundle when cache set to false", function () {
+                ngI18nConfig.caching = false;
+
+                assertNotCachingResourceBundle();
+            });
+
+            it("should not cache resourceBundle when cache not set", function () {
+                assertNotCachingResourceBundle();
+            });
+
+            function assertNotCachingResourceBundle(){
+                $httpBackend.when("GET", '/i18n/resourceBundle_nl.json').respond(expectedResourceBundle);
+
+                firstCall();
+
+                secondCallCapturesResourceBundle();
+
+                flushBothCallsThisWouldFailWhenCachingIsTrue();
+
+                expect(resourceBundle).toEqual(expectedResourceBundle);
+
+                function flushBothCallsThisWouldFailWhenCachingIsTrue() {
+                    $httpBackend.flush(2);
+                }
+            }
+
+            it("should be able to cache resourceBundle when cache set to true", function () {
+                $httpBackend.when("GET", '/i18n/resourceBundle_nl.json').respond(expectedResourceBundle);
+                ngI18nConfig.cache = true;
+
+                firstCall();
+
+                secondCallCapturesResourceBundle();
+
+                onlyFlushOnCallSecondCallShouldBeCached();
+
+                expect(resourceBundle).toEqual(expectedResourceBundle);
+
+                function onlyFlushOnCallSecondCallShouldBeCached() {
+                    $httpBackend.flush(1);
+                }
+
+            });
+
+            function firstCall() {
+                ngI18nResourceBundle.get({locale:'nl'});
+            }
+
+            function secondCallCapturesResourceBundle() {
+                ngI18nResourceBundle.get({locale:'nl'}).success(function (data) {
+                    resourceBundle = data;
+                });
+            }
+
+        });
+
         describe('supported locales global option - ', function () {
             it("should be able to fallback to default resourceBundle when locale not supported", function () {
                 ngI18nConfig.supportedLocales = ['nl', 'en'];

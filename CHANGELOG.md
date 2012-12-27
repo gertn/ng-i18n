@@ -7,6 +7,7 @@
 * Removed ngI18nLocaleContextHolder
 * Implemented algorithm to get resourceBundle
 * added local options locale and name
+* added global option cache
 
 ### v0.1.0
 

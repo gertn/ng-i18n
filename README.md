@@ -109,6 +109,7 @@ Global options that can be provided:
 *  defaultLocale: specifies the default locale (required and in lowercase)
 *  supportedLocales: specifies the supported locales (required and in lowercase)
 *  basePath: specifies base path of url (optional)
+*  cache: enables caching of the resource bundle (optional)
 
 ### 'defaultLocale' (always in lowercase, has no global default and should always be provided!!)
 Example config:
@@ -136,8 +137,20 @@ Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
 yourApp.value('ngI18nConfig', {
-    //without leading and trailing slashes (global default is i18n)
+    //without leading and trailing slashes, default is i18n
     basePath: 'base/path'
+    ... {add your other global defaults}
+});
+```
+
+### 'cache' (global default is false)
+When the cache is enabled, $http stores the response from the server (the resource bundle) in local cache.
+Example config:
+```javascript
+var yourApp = angular.module('yourApp', ['ngI18n']);
+yourApp.value('ngI18nConfig', {
+    //default is false
+    cache: true
     ... {add your other global defaults}
 });
 ```
@@ -174,7 +187,8 @@ var yourApp = angular.module('yourApp', ['ngI18n']);
 yourApp.value('ngI18nConfig', {
     defaultLocale: 'en',
     supportedLocales: ['en', 'nl', 'fr-be'],
-    basePath: 'app/i18n'
+    basePath: 'app/i18n',
+    cache: true
 });
 ```
 Http Server running at http://localhost:8000/
@@ -215,6 +229,16 @@ ngI18nResourceBundle.get({locale: 'en', name: 'customName'});
 ```
 => GET http://localhost:8000/app/i18n/customName.json
 
+#### example - caching
+```javascript
+//first call
+ngI18nResourceBundle.get({locale: 'en'});
+//second call
+ngI18nResourceBundle.get({locale: 'en'});
+```
+first call => GET http://localhost:8000/app/i18n/resourceBundle.json
+second call => no call, the resource bundle is retrieved from local cache
+
 ## Example app
 You can find an example app in the app directory.
 
@@ -229,3 +253,4 @@ You can pick one of these options:
 
 Then navigate your browser to `http://localhost:<port>/app/index.html` to see the example app running in
 your browser.
+
