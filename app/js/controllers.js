@@ -9,11 +9,14 @@ function MainCtrl(ngI18nResourceBundle, ngI18nConfig, $scope) {
         {locale:"en-US"},
         {locale:"nl-BE"},
         {locale:"nl-nl"},
-        {locale:"nl-be"}
+        {locale:"nl-be"},
+        {locale:"de"}
     ];
 
     $scope.supportedLocales = ngI18nConfig.supportedLocales;
     $scope.defaultLocale = ngI18nConfig.defaultLocale;
+    $scope.basePath = ngI18nConfig.basePath;
+    $scope.cache = ngI18nConfig.cache;
 
     $scope.language = $scope.languages[0];
 

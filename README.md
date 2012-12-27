@@ -126,7 +126,7 @@ Example config:
 ```javascript
 var yourApp = angular.module('yourApp', ['ngI18n']);
 yourApp.value('ngI18nConfig', {
-    //supportedLocales should be in lowercase and is required!!
+    //supportedLocales is required - all locales should be in lowercase!!
     supportedLocales: ['en-us', 'nl']
     ... {add your other global defaults}
 });

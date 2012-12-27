@@ -9,13 +9,14 @@ angular.module('ngI18nService', [],function ($provide) {
     $provide.factory('ngI18nResourceBundle', ['$http', 'ngI18nConfig', '$window',
         function ($http, ngI18nConfig, $window) {
             ngI18nConfig.basePath = ngI18nConfig.basePath || 'i18n';
+            ngI18nConfig.cache = ngI18nConfig.cache || false;
             ngI18nConfig.supportedLocales = ngI18nConfig.supportedLocales || [];
 
             function get(options) {
                 var _options = options || {};
                 var resourceBundleName = _options.name || 'resourceBundle';
                 var url = '/' + ngI18nConfig.basePath + '/' + resourceBundleName + getLocaleOrLanguageFromLocaleSuffix(_options).toLowerCase() + '.json';
-                return $http.get(url);
+                return $http({ method:"GET", url:url, cache:ngI18nConfig.cache });
             }
 
             function getLocaleOrLanguageFromLocaleSuffix(options) {

@@ -17,9 +17,16 @@
 
 <div ng-view></div>
 
+<h3>global config:</h3>
 <div>{{resourceBundle.defaultLocale}}: "{{defaultLocale}}"</div>
 <div>{{resourceBundle.supportedLocales}}: {{supportedLocales}}</div>
-<div>resourceBundle: {{resourceBundle.resourceBundle}}</div>
+<div>base path: {{basePath}}</div>
+<div>cache: {{cache}}</div>
+
+<h3>$http request interceptor:</h3>
+<div>method: {{request.method}}</div>
+<div>url: {{request.url}}</div>
+<br>
 <div>ngI18n {{resourceBundle.example}} app</div>
 
 <!-- In production use:
