@@ -3,30 +3,41 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Ng-i18n by gertn</title>
-
+    <title>ng-i18n by gertn</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
   <body>
-    <div class="wrapper">
+
       <header>
-        <h1>Ng-i18n</h1>
+        <h1>ng-i18n</h1>
         <p>Internationalization module for angular.js</p>
-
-        <p class="view"><a href="https://github.com/gertn/ng-i18n">View the Project on GitHub <small>gertn/ng-i18n</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/gertn/ng-i18n/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/gertn/ng-i18n/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/gertn/ng-i18n">View On <strong>GitHub</strong></a></li>
-        </ul>
       </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/gertn/ng-i18n" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/gertn/ng-i18n/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/gertn/ng-i18n/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
       <section>
         <p><a href="https://travis-ci.org/gertn/ng-i18n"><img src="https://travis-ci.org/gertn/ng-i18n.png" alt="Build Status"></a></p>
 
@@ -278,11 +289,21 @@ Is this locale the default locale?
 your browser.</p>
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/gertn">gertn</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p>Project maintained by <a href="https://github.com/gertn">gertn</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-20779811-8");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
