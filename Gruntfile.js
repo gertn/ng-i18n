@@ -18,7 +18,7 @@ module.exports = function(grunt) {
                     ' * @license MIT License, http://www.opensource.org/licenses/MIT\n'
                     + ' */\n' ,
 				src : {
-					js : [ 'src/**/*.js' ],
+					js : [ 'src/**/*.js' ]
 				},
 				clean : [ '<%= targetdir %>/*', '<%= distdir %>/*' ],
 				copyRootdirs : {
@@ -28,8 +28,7 @@ module.exports = function(grunt) {
 				},
 				uglify : {
 					options : {
-						mangle : false,
-						banner : '<%= banner %>'
+						mangle : false
 					},
 					dist : {
 						src : '<%= srcdir %>/<%= pkg.name %>.js',
@@ -40,10 +39,15 @@ module.exports = function(grunt) {
 					options : {
 						banner : '<%= banner %>'
 					},
-					dist : {
-                        src : '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>.js',
+                    file_src : {
+                        src : '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>-<%= pkg.version %>.js',
                         dest : '<%= distdir %>/<%= pkg.name %>-<%= pkg.version %>.js'
-					}
+                    },
+                    file_src_min : {
+                        src : '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>-<%= pkg.version %>.min.js',
+                        dest : '<%= distdir %>/<%= pkg.name %>-<%= pkg.version %>.min.js'
+                    }
+
 				},
 				watch : {
 					files : [ '<%= src.js %>', '<%= test.unit %>' ],
@@ -53,16 +57,6 @@ module.exports = function(grunt) {
 					unit : [ 'test/unit/**/*Spec.js' ],
 					e2e : [ 'test/e2e/**/*scenarios.js' ],
 					buildDir : '<%= targetdir %>'
-				},
-				dist : {
-					file_src : {
-						src : '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>-<%= pkg.version %>.js',
-						dest : '<%= distdir %>/<%= pkg.name %>-<%= pkg.version %>.js'
-					},
-                    file_src_min : {
-						src : '<%= targetdir %>/<%= srcdir %>/<%= pkg.name %>-<%= pkg.version %>.min.js',
-						dest : '<%= distdir %>/<%= pkg.name %>-<%= pkg.version %>.min.js'
-					}
 				},
                 renameSrcFilesWithVersion : {
                     src : {
@@ -82,13 +76,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadTasks('build');
 
-	grunt.registerMultiTask('dist', 'Copy files to distdir', function() {
-        grunt.log.write('Dist file copy from "' + this.data.src + '" to "'
-            + this.data.dest + '"');
-        grunt.file.copy(this.data.src, this.data.dest);
-        grunt.log.ok();
-    });
-
     grunt.registerMultiTask('renameSrcFilesWithVersion', 'rename files', function() {
         grunt.log.write('rename file from "' + this.data.src + '" to "'
             + this.data.to + '"');
@@ -101,7 +88,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', [ 'build' ]);
 
 	grunt.registerTask('build', [ 'clean', 'uglify', 'copyRootdirs', 'renameSrcFilesWithVersion',
-			'testBuild', 'testBuildMin', 'e2e', 'concat', 'dist' ]);
+			'testBuild', 'testBuildMin', 'e2e', 'concat' ]);
 
 	grunt.registerTask('release', [ 'checkForChangedFiles', 'build', 'tag',
 			'bump' ]);

@@ -1,3 +1,9 @@
+/**
+ * I18n module for AngularJs
+ * @version v0.2.0 - 2012-12-29
+ * @link http://gertn.github.com/ng-i18n/
+ * @license MIT License, http://www.opensource.org/licenses/MIT
+ */
 'use strict';
 
 angular.module('ngI18nConfig', []).value('ngI18nConfig', {});
