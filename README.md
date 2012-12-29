@@ -172,13 +172,13 @@ First determine locale
 Is this locale the default locale?
 	Yes => get default resourceBundle e.g. /i18n/resourceBundle.json
 	No => is this locale one of the supported locales?
-			Yes => get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en.json (locale => 'en')
-			No => is language from this locale supported?
-				Yes =>  is language from locale default locale?
-				    Yes => get default resourceBundle e.g. /i18n/resourceBundle.json
-				    No => get resourceBundle with language from locale suffix
-				            e.g. /i18n/resourceBundle_en.json (locale => 'en-US')
-				No => fallback to default resourceBundle e.g. /i18n/resourceBundle.json
+			Yes => get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en-us.json (locale => 'en-us')
+			No => is language from locale default locale?
+			    Yes => get default resourceBundle e.g. /i18n/resourceBundle.json
+				No =>  is language from this locale one of the supported locales?
+				    Yes => get resourceBundle with language from locale suffix
+				            e.g. /i18n/resourceBundle_en.json (locale => 'en-us')
+				    No => fallback to default resourceBundle e.g. /i18n/resourceBundle.json
 ```
 
 Local options that can be provided:

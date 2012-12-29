@@ -3,7 +3,6 @@
     "view_2":"Tweede view",
     "language": "Taal",
     "example": "voorbeeld",
-    "resourceBundle": "app/i18n/resourceBundle_nl.json",
     "supportedLocales": "gesupporteerde locales",
     "defaultLocale": "standaard locale",
     "text_view_1":"Dit is de eerste view, hopelijk in het Nederlands :)",
