@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="testacular debug e2e" type="JavascriptDebugSession" factoryName="Remote">
+    <JSRemoteDebuggerConfigurationSettings>
+      <option name="engineId" value="chrome" />
+      <option name="fileUrl" value="http://localhost:8081/debug.html" />
+      <mapping local-file="$PROJECT_DIR$" url="http://localhost:8081/base" />
+    </JSRemoteDebuggerConfigurationSettings>
+    <RunnerSettings RunnerId="JavascriptDebugRunner" />
+    <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+    <method />
+  </configuration>
+</component>

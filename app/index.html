@@ -6,16 +6,23 @@
     <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body ng-controller="MainCtrl">
-<ul class="menu">
-    <li><a href="#/view1" ng-bind="resourceBundle.view_1"></a></li>
-    <li><a href="#/view2"  ng-bind="resourceBundle.view_2"></a></li>
-    <li><label for="switchLanguage"  ng-bind="resourceBundle.language"></label>
-        <select name="switchLanguage" ng-model="language" id="switchLanguage" ng-options="l.locale for l in languages">
-        </select>
-    </li>
-</ul>
+<header>
+    <ul class="menu">
+        <li><a href="#/view1" ng-bind="resourceBundle.view_1"></a></li>
+        <li><a href="#/view2"  ng-bind="resourceBundle.view_2"></a></li>
+        <li><label for="switchLanguage"  ng-bind="resourceBundle.language"></label>
+            <select name="switchLanguage" ng-model="language" id="switchLanguage" ng-options="l.locale for l in languages">
+            </select>
+        </li>
+    </ul>
+</header>
 
 <div ng-view></div>
+
+<hr>
+<h3>$http request interceptor:</h3>
+<div>method: {{request.method}}</div>
+<div>url: <span id="url">{{request.url}}</span></div>
 
 <h3>global config:</h3>
 <div>{{resourceBundle.defaultLocale}}: "{{defaultLocale}}"</div>
@@ -23,11 +30,8 @@
 <div>base path: {{basePath}}</div>
 <div>cache: {{cache}}</div>
 
-<h3>$http request interceptor:</h3>
-<div>method: {{request.method}}</div>
-<div>url: {{request.url}}</div>
-<br>
-<div>ngI18n {{resourceBundle.example}} app</div>
+<hr>
+<footer>ngI18n {{resourceBundle.example}} app</footer>
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
