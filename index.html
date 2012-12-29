@@ -44,18 +44,21 @@
 <h1>Internationalization module for AngularJS</h1>
 
 <p>This is an internationalization module for AngularJS, it allows you to localize your application with resource bundles.
-The file type for the resource bundle is '.json'.</p>
-
-<p>The source files can be found in the <code>dist</code> directory.</p>
+<br>
+The file extension of the resource bundles files is '.json'.
+<br>
+The build and compressed files can be found in the <code>dist</code> directory.</p>
 
 <h2>How to use</h2>
 
 <p>This example uses two locales, 'en' which is the default and 'nl'.
+<br>
 For more configuration options take a look at the 'ngI18nConfig' section.</p>
 
 <h3>1. create your resource bundle files</h3>
 
 <p>You need to provide a default resource bundle for the default locale and one for locale 'nl'.
+<br>
 Put these resource bundles in the 'i18n' directory.</p>
 
 <pre><code>i18n/
@@ -130,10 +133,10 @@ Put these resource bundles in the 'i18n' directory.</p>
 <div class="highlight"><pre>    <span class="nt">&lt;p&gt;</span>{{resourceBundle.text_view_1}}<span class="nt">&lt;/p&gt;</span>
 </pre></div>
 
-<p>If you selected 'en' as language then '{{resourceBundle.text_view_1}}' will be displayed as:
-This is the first view, hopefully in English :)</p>
-
-<p>If you selected 'nl' as language then  it will be displayed as:
+<p>If you selected 'en' as language then '{{resourceBundle.text_view_1}}' will be displayed as:  <br>
+This is the first view, hopefully in English :)
+<br>
+If you selected 'nl' as language then  it will be displayed as: <br>
 Dit is de eerste view, hopelijk in het Nederlands :)</p>
 
 <h2>ngI18nConfig</h2>
@@ -152,6 +155,7 @@ Dit is de eerste view, hopelijk in het Nederlands :)</p>
 <li> defaultLocale: specifies the default locale (required and in lowercase)</li>
 <li> supportedLocales: specifies the supported locales (required and in lowercase)</li>
 <li> basePath: specifies base path of url (optional)</li>
+<li> cache: enables caching of the resource bundle (optional)</li>
 </ul><h3>'defaultLocale' (always in lowercase, has no global default and should always be provided!!)</h3>
 
 <p>Example config:</p>
@@ -170,7 +174,7 @@ Dit is de eerste view, hopelijk in het Nederlands :)</p>
 
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">yourApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'yourApp'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'ngI18n'</span><span class="p">]);</span>
 <span class="nx">yourApp</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="s1">'ngI18nConfig'</span><span class="p">,</span> <span class="p">{</span>
-    <span class="c1">//supportedLocales should be in lowercase and is required!!</span>
+    <span class="c1">//supportedLocales is required - all locales should be in lowercase!!</span>
     <span class="nx">supportedLocales</span><span class="o">:</span> <span class="p">[</span><span class="s1">'en-us'</span><span class="p">,</span> <span class="s1">'nl'</span><span class="p">]</span>
     <span class="p">...</span> <span class="p">{</span><span class="nx">add</span> <span class="nx">your</span> <span class="nx">other</span> <span class="nx">global</span> <span class="nx">defaults</span><span class="p">}</span>
 <span class="p">});</span>
@@ -182,8 +186,22 @@ Dit is de eerste view, hopelijk in het Nederlands :)</p>
 
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">yourApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'yourApp'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'ngI18n'</span><span class="p">]);</span>
 <span class="nx">yourApp</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="s1">'ngI18nConfig'</span><span class="p">,</span> <span class="p">{</span>
-    <span class="c1">//without leading and trailing slashes (global default is i18n)</span>
+    <span class="c1">//without leading and trailing slashes, default is i18n</span>
     <span class="nx">basePath</span><span class="o">:</span> <span class="s1">'base/path'</span>
+    <span class="p">...</span> <span class="p">{</span><span class="nx">add</span> <span class="nx">your</span> <span class="nx">other</span> <span class="nx">global</span> <span class="nx">defaults</span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+<h3>'cache' (global default is false)</h3>
+
+<p>When the cache is enabled, $http stores the response from the server (the resource bundle) in local cache.
+<br>
+Example config:</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">yourApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'yourApp'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'ngI18n'</span><span class="p">]);</span>
+<span class="nx">yourApp</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="s1">'ngI18nConfig'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="c1">//default is false</span>
+    <span class="nx">cache</span><span class="o">:</span> <span class="kc">true</span>
     <span class="p">...</span> <span class="p">{</span><span class="nx">add</span> <span class="nx">your</span> <span class="nx">other</span> <span class="nx">global</span> <span class="nx">defaults</span><span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
@@ -191,6 +209,7 @@ Dit is de eerste view, hopelijk in het Nederlands :)</p>
 <h2>ngI18nResourceBundle service</h2>
 
 <p>It has one method <code>get(options)</code>.
+<br>
 It will load the resource bundle according to the following algorithm:</p>
 
 <pre><code>First determine locale
@@ -201,13 +220,13 @@ It will load the resource bundle according to the following algorithm:</p>
 Is this locale the default locale?
     Yes =&gt; get default resourceBundle e.g. /i18n/resourceBundle.json
     No =&gt; is this locale one of the supported locales?
-            Yes =&gt; get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en.json (locale =&gt; 'en')
-            No =&gt; is language from this locale supported?
-                Yes =&gt;  is language from locale default locale?
-                    Yes =&gt; get default resourceBundle e.g. /i18n/resourceBundle.json
-                    No =&gt; get resourceBundle with language from locale suffix
-                            e.g. /i18n/resourceBundle_en.json (locale =&gt; 'en-US')
-                No =&gt; fallback to default resourceBundle e.g. /i18n/resourceBundle.json
+            Yes =&gt; get resourceBundle with locale suffix e.g. /i18n/resourceBundle_en-us.json (locale =&gt; 'en-us')
+            No =&gt; is language from locale default locale?
+                Yes =&gt; get default resourceBundle e.g. /i18n/resourceBundle.json
+                No =&gt;  is language from this locale one of the supported locales?
+                    Yes =&gt; get resourceBundle with language from locale suffix
+                            e.g. /i18n/resourceBundle_en.json (locale =&gt; 'en-us')
+                    No =&gt; fallback to default resourceBundle e.g. /i18n/resourceBundle.json
 </code></pre>
 
 <p>Local options that can be provided:</p>
@@ -223,7 +242,8 @@ Is this locale the default locale?
 <span class="nx">yourApp</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="s1">'ngI18nConfig'</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">defaultLocale</span><span class="o">:</span> <span class="s1">'en'</span><span class="p">,</span>
     <span class="nx">supportedLocales</span><span class="o">:</span> <span class="p">[</span><span class="s1">'en'</span><span class="p">,</span> <span class="s1">'nl'</span><span class="p">,</span> <span class="s1">'fr-be'</span><span class="p">],</span>
-    <span class="nx">basePath</span><span class="o">:</span> <span class="s1">'app/i18n'</span>
+    <span class="nx">basePath</span><span class="o">:</span> <span class="s1">'app/i18n'</span><span class="p">,</span>
+    <span class="nx">cache</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">});</span>
 </pre></div>
 
@@ -271,11 +291,28 @@ Is this locale the default locale?
 
 <p>=&gt; GET http://localhost:8000/app/i18n/customName.json</p>
 
+<div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'nl'</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">'customName'</span><span class="p">});</span>
+</pre></div>
+
+<p>=&gt; GET http://localhost:8000/app/i18n/customName_nl.json</p>
+
+<h4>example - caching</h4>
+
+<div class="highlight"><pre><span class="c1">//first call</span>
+<span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'en'</span><span class="p">});</span>
+<span class="c1">//second call</span>
+<span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'en'</span><span class="p">});</span>
+</pre></div>
+
+<p>first call =&gt; GET http://localhost:8000/app/i18n/resourceBundle.json
+<br>
+second call =&gt; no call, the resource bundle is retrieved from local cache</p>
+
 <h2>Example app</h2>
 
-<p>You can find an example app in the app directory.</p>
-
-<p>Look at <code>app.js</code>, <code>controller.js</code>, <code>index.html</code> and the two partials in the <code>partials</code> directory.</p>
+<p>You can find an example app in the app directory.
+<br>
+Look at <code>app.js</code>, <code>controller.js</code>, <code>index.html</code> and the two partials in the <code>partials</code> directory.</p>
 
 <h3>Running the example app</h3>
 
@@ -294,16 +331,6 @@ your browser.</p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-20779811-8");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
+    
   </body>
 </html>
