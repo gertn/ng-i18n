@@ -79,8 +79,6 @@ example resourceBundle_nl.json (for locale 'nl')
            {locale:"nl"}
        ];
 
-       $scope.i18n = {};
-
        $scope.i18n = {language: $scope.languages[0]};
 
        $scope.$watch('i18n.language', function (language) {

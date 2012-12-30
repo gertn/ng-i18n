@@ -3,16 +3,14 @@
 /* Controllers */
 function MainCtrl(ngI18nResourceBundle, ngI18nConfig, $scope) {
 
-    $scope.i18n = {};
-
     $scope.languages = [
-        {"locale":"en"},
-        {"locale":"nl"},
-        {"locale":"en-US"},
-        {"locale":"nl-BE"},
-        {"locale":"nl-nl"},
-        {"locale":"nl-be"},
-        {"locale":"de"}
+        {locale:"en"},
+        {locale:"nl"},
+        {locale:"en-US"},
+        {locale:"nl-BE"},
+        {locale:"nl-nl"},
+        {locale:"nl-be"},
+        {locale:"de"}
     ];
 
     $scope.supportedLocales = ngI18nConfig.supportedLocales;
