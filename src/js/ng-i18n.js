@@ -15,7 +15,7 @@ angular.module('ngI18nService', [],function ($provide) {
             function get(options) {
                 var _options = options || {};
                 var resourceBundleName = _options.name || 'resourceBundle';
-                var url = '/' + ngI18nConfig.basePath + '/' + resourceBundleName + getLocaleOrLanguageFromLocaleSuffix(_options).toLowerCase() + '.json';
+                var url = ngI18nConfig.basePath + '/' + resourceBundleName + getLocaleOrLanguageFromLocaleSuffix(_options).toLowerCase() + '.json';
                 return $http({ method:"GET", url:url, cache:ngI18nConfig.cache });
             }
 

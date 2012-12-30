@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="testacular server" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="node_modules/testacular/bin/testacular" application-parameters="start &quot;config\testacular.conf.js&quot;" working-dir="$PROJECT_DIR$">
+  <configuration default="false" name="testacular server" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="node_modules/testacular/bin/testacular" application-parameters="start &quot;config\testacular.conf.js&quot;" working-dir="$PROJECT_DIR$" coffeescript-run="false">
     <RunnerSettings RunnerId="NodeJS.run" />
     <ConfigurationWrapper RunnerId="NodeJS.run" />
     <method />

@@ -6,16 +6,6 @@
     <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body ng-controller="MainCtrl">
-<header>
-    <ul class="menu">
-        <li><a href="#/view1" ng-bind="resourceBundle.view_1"></a></li>
-        <li><a href="#/view2"  ng-bind="resourceBundle.view_2"></a></li>
-        <li><label for="switchLanguage"  ng-bind="resourceBundle.language"></label>
-            <select name="switchLanguage" ng-model="language" id="switchLanguage" ng-options="l.locale for l in languages">
-            </select>
-        </li>
-    </ul>
-</header>
 
 <div ng-view></div>
 

@@ -1,6 +1,6 @@
 /**
  * I18n module for AngularJs
- * @version v0.2.0 - 2012-12-29
+ * @version v0.2.0 - 2012-12-30
  * @link http://gertn.github.com/ng-i18n/
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -21,7 +21,7 @@ angular.module('ngI18nService', [],function ($provide) {
             function get(options) {
                 var _options = options || {};
                 var resourceBundleName = _options.name || 'resourceBundle';
-                var url = '/' + ngI18nConfig.basePath + '/' + resourceBundleName + getLocaleOrLanguageFromLocaleSuffix(_options).toLowerCase() + '.json';
+                var url = ngI18nConfig.basePath + '/' + resourceBundleName + getLocaleOrLanguageFromLocaleSuffix(_options).toLowerCase() + '.json';
                 return $http({ method:"GET", url:url, cache:ngI18nConfig.cache });
             }
 

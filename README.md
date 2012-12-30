@@ -58,14 +58,15 @@ example resourceBundle_nl.json (for locale 'nl')
     var yourApp = angular.module('yourApp',['ngI18n', ... {other includes}]);
     yourApp.value('ngI18nConfig', {
         defaultLocale: 'en',
-        supportedLocales: ['en', 'nl'],
+        supportedLocales: ['en', 'nl']
     });
 ```
 
 ### 4. add language switcher to your html
 
 ```html
-    <select name="switchLanguage" ng-model="language" id="switchLanguage" ng-options="l.locale for l in languages">
+    <select name="switchLanguage" ng-model="i18n.language" id="switchLanguage" ng-options="l.locale for l in languages">
+    </select>
 ```
 
 ### 5. load the resource bundle from your main controller and $watch for changes to the language model
@@ -78,9 +79,11 @@ example resourceBundle_nl.json (for locale 'nl')
            {locale:"nl"}
        ];
 
-       $scope.language = $scope.languages[0];
+       $scope.i18n = {};
 
-       $scope.$watch('language', function (language) {
+       $scope.i18n = {language: $scope.languages[0]};
+
+       $scope.$watch('i18n.language', function (language) {
            ngI18nResourceBundle.get({locale: language.locale}).success(function (resourceBundle) {
                $scope.resourceBundle = resourceBundle;
            });

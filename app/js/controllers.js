@@ -3,14 +3,16 @@
 /* Controllers */
 function MainCtrl(ngI18nResourceBundle, ngI18nConfig, $scope) {
 
+    $scope.i18n = {};
+
     $scope.languages = [
-        {locale:"en"},
-        {locale:"nl"},
-        {locale:"en-US"},
-        {locale:"nl-BE"},
-        {locale:"nl-nl"},
-        {locale:"nl-be"},
-        {locale:"de"}
+        {"locale":"en"},
+        {"locale":"nl"},
+        {"locale":"en-US"},
+        {"locale":"nl-BE"},
+        {"locale":"nl-nl"},
+        {"locale":"nl-be"},
+        {"locale":"de"}
     ];
 
     $scope.supportedLocales = ngI18nConfig.supportedLocales;
@@ -18,9 +20,9 @@ function MainCtrl(ngI18nResourceBundle, ngI18nConfig, $scope) {
     $scope.basePath = ngI18nConfig.basePath;
     $scope.cache = ngI18nConfig.cache;
 
-    $scope.language = $scope.languages[0];
+    $scope.i18n = {language: $scope.languages[0]};
 
-    $scope.$watch('language', function (language) {
+    $scope.$watch('i18n.language', function (language) {
         ngI18nResourceBundle.get({locale: language.locale}).success(function (resourceBundle) {
             $scope.resourceBundle = resourceBundle;
         });

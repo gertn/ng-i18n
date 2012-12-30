@@ -58,7 +58,7 @@ describe('ngI18nService - ', function () {
             });
 
             function assertResourceBundleLoadedWithLocaleFromBrowser(locale) {
-                $httpBackend.when("GET", '/i18n/resourceBundle_' + locale + '.json').respond(expectedResourceBundle);
+                $httpBackend.when("GET", 'i18n/resourceBundle_' + locale + '.json').respond(expectedResourceBundle);
 
                 ngI18nResourceBundle.get().success(function (data) {
                     resourceBundle = data;
@@ -91,7 +91,7 @@ describe('ngI18nService - ', function () {
             });
 
             function assertNotCachingResourceBundle(){
-                $httpBackend.when("GET", '/i18n/resourceBundle_nl.json').respond(expectedResourceBundle);
+                $httpBackend.when("GET", 'i18n/resourceBundle_nl.json').respond(expectedResourceBundle);
 
                 firstCall();
 
@@ -107,7 +107,7 @@ describe('ngI18nService - ', function () {
             }
 
             it("should be able to cache resourceBundle when cache set to true", function () {
-                $httpBackend.when("GET", '/i18n/resourceBundle_nl.json').respond(expectedResourceBundle);
+                $httpBackend.when("GET", 'i18n/resourceBundle_nl.json').respond(expectedResourceBundle);
                 ngI18nConfig.cache = true;
 
                 firstCall();
@@ -153,7 +153,7 @@ describe('ngI18nService - ', function () {
             });
 
             function assertResourceBundleLoadedForSupportedLocales(localeForGet, localeForUrl) {
-                $httpBackend.when("GET", '/i18n/resourceBundle_' + localeForUrl + '.json').respond(expectedResourceBundle);
+                $httpBackend.when("GET", 'i18n/resourceBundle_' + localeForUrl + '.json').respond(expectedResourceBundle);
 
                 ngI18nResourceBundle.get({locale:localeForGet}).success(function (data) {
                     resourceBundle = data;
@@ -175,7 +175,7 @@ describe('ngI18nService - ', function () {
             });
 
             function assertResourceBundleLoadedWithCustomName(options) {
-                $httpBackend.when("GET", '/i18n/' + options.name  + '.json').respond(expectedResourceBundle);
+                $httpBackend.when("GET", 'i18n/' + options.name  + '.json').respond(expectedResourceBundle);
 
                 ngI18nResourceBundle.get(options).success(function (data) {
                     resourceBundle = data;
@@ -209,7 +209,7 @@ describe('ngI18nService - ', function () {
 
         function assertResourceBundleLoaded(locale, basePath) {
             var _basePath = basePath || 'i18n';
-            $httpBackend.when("GET", '/' + _basePath + '/resourceBundle_' + locale + '.json').respond(expectedResourceBundle);
+            $httpBackend.when("GET", _basePath + '/resourceBundle_' + locale + '.json').respond(expectedResourceBundle);
 
             ngI18nResourceBundle.get({locale:locale}).success(function (data) {
                 resourceBundle = data;
@@ -221,7 +221,7 @@ describe('ngI18nService - ', function () {
         }
 
         function assertDefaultResourceBundleLoaded(locale) {
-            $httpBackend.when("GET", '/i18n/resourceBundle.json').respond(expectedResourceBundle);
+            $httpBackend.when("GET", 'i18n/resourceBundle.json').respond(expectedResourceBundle);
 
             ngI18nResourceBundle.get({locale:locale}).success(function (data) {
                 resourceBundle = data;
