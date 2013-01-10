@@ -1,6 +1,6 @@
 /**
  * I18n module for AngularJs
- * @version v0.2.0 - 2013-01-09
+ * @version v0.2.0 - 2013-01-10
  * @link http://gertn.github.com/ng-i18n/
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
