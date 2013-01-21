@@ -2,9 +2,312 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd69ac9b-2c1a-4b9e-8518-2eaed6884793" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-cli\.npmignore" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\.npmignore" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\docs\concat.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\.npmignore" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\docs\nodeunit-options.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\.npmignore" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\expand\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\octocat.png" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\.npmignore" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\docs\architecture.png" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\docs\sequence.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/ng-i18n-0.2.0.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/ng-i18n-0.2.0.min.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\.bin\grunt.cmd" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\.bin\grunt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\.bin\testacular.cmd" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\.bin\testacular" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\async\.gitmodules" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\async\.npmignore" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\async\LICENSE" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\async\Makefile" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\async\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\async\index.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\async\lib\async.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\async\package.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-cli\.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-cli\AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-cli\Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-cli\LICENSE-MIT" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-cli\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-cli\bin\grunt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-cli\completion\bash" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-cli\lib\cli.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-cli\lib\completion.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-cli\lib\info.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-cli\package.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\.npmignore" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\CHANGELOG" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\LICENSE-MIT" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\docs\examples.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\docs\options.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\docs\overview.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\package.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\tasks\clean.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\test\clean_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\test\fixtures\sample_long\long.txt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-clean\test\fixtures\sample_short\short.txt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\CHANGELOG" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\LICENSE-MIT" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\docs\concat-examples.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\docs\concat-options.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\docs\concat-overview.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\package.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\tasks\concat.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\tasks\lib\comment.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\test\concat_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\test\expected\custom_options" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\test\expected\default_options" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\test\fixtures\banner.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\test\fixtures\banner2.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\test\fixtures\banner3.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\test\fixtures\file1" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\test\fixtures\file2" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\tmp\custom_options" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-concat\tmp\default_options" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\.npmignore" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\CHANGELOG" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\LICENSE-MIT" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\docs\jshint-examples.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\docs\jshint-options.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\docs\jshint-overview.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\package.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\tasks\jshint.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\tasks\lib\jshint.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\test\fixtures\lint.txt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-jshint\test\jshint_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\CHANGELOG" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\LICENSE-MIT" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\docs\nodeunit-examples.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\docs\nodeunit-overview.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\package.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\tasks\nodeunit.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-nodeunit\test\nodeunit_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\.npmignore" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\CHANGELOG" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\LICENSE-MIT" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\docs\uglify-examples.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\docs\uglify-options.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\docs\uglify-overview.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\package.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\tasks\lib\min.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\tasks\lib\uglify.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\tasks\uglify.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\expected\comments.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\expected\compress.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\expected\compress_mangle.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\expected\compress_mangle_beautify.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\expected\compress_mangle_except.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\expected\compress_mangle_sourcemap" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\expected\multifile.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\expected\sourcemapin.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\expected\sourcemapin" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\expected\sourcemapurl.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\src\comments.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\src\simple.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\src\simple2.coffee" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\src\simple2.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\fixtures\src\simple2.map" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-uglify\test\uglify_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\.editorconfig" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\.npmignore" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\CHANGELOG" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\LICENSE-MIT" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\docs\watch-examples.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\docs\watch-faqs.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\docs\watch-options.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\docs\watch-overview.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\package.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\tasks\watch.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\test\fixtures\multiTargets\Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\test\fixtures\multiTargets\lib\fail.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\test\fixtures\multiTargets\lib\interrupt.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\test\fixtures\multiTargets\lib\one.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\test\fixtures\multiTargets\lib\two.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\test\fixtures\multiTargets\lib\wait.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\test\fixtures\oneTarget\Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\test\fixtures\oneTarget\lib\one.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\test\fixtures\tasks\echo.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt-contrib-watch\test\tasks\watch_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\LICENSE-MIT" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\docs\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\grunt.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\grunt\cli.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\grunt\config.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\grunt\event.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\grunt\fail.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\grunt\file.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\grunt\help.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\grunt\log.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\grunt\option.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\grunt\task.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\grunt\template.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\grunt\util.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\util\exit.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\util\namespace.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\lib\util\task.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\package.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\BOM.txt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\Gruntfile-print-text.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\a.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\b.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\banner.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\banner2.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\banner3.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\exec.cmd" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\exec.sh" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\expand\css\baz.css" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\expand\css\qux.css" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\expand\deep\deep.txt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\expand\deep\deeper\deeper.txt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\expand\deep\deeper\deepest\deepest.txt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\expand\js\bar.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\expand\js\foo.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\files\dist\built-123-a.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\files\dist\built-123-b.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\files\dist\built-a.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\files\dist\built-b.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\files\dist\built.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\files\src\file1-123.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\files\src\file1.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\files\src\file2-123.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\files\src\file2.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\iso-8859-1.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\iso-8859-1.txt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\iso-8859-1.yaml" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\lint.txt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\no_BOM.txt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\spawn.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\template.txt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\test.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\utf8.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\utf8.txt" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\fixtures\utf8.yaml" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\grunt\config_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\grunt\event_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\grunt\file_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\grunt\log_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\grunt\task_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\grunt\template_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\grunt\util_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\gruntfile\multi-task-files.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\util\namespace_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\test\util\task_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\LICENSE-MIT" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\libs\jquery-loader.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\libs\jquery\jquery.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\libs\qunit\qunit.css" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\libs\qunit\qunit.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\package.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\src\.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\src\tmp.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\test\.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\test\tmp.html" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\test\tmp_test.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\grunt\tmp\tmp.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\LICENSE" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\README.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\adapter\angular-scenario.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\adapter\jasmine.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\adapter\lib\angular-scenario.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\adapter\lib\jasmine.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\adapter\lib\mocha.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\adapter\mocha.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\bin\testacular" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\config.template" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\docs\browsers.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\docs\client-server-protocol.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\docs\events.md" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\browser.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\cli.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\config.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\constants.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\events.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\file-list.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\index.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\init.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\launcher.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\launchers\Base.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\launchers\Chrome.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\launchers\ChromeCanary.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\launchers\Firefox.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\launchers\IE.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\launchers\Opera.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\launchers\PhantomJS.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\launchers\Safari.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\logger.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\preprocessor.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\proxy.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\reporter.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\reporters\Base.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\reporters\BaseColor.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\reporters\Dots.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\reporters\DotsColor.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\reporters\JUnit.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\reporters\Multi.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\reporters\Progress.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\reporters\ProgressColor.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\runner.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\server.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\util.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\watcher.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\lib\web-server.js" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\package.json" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\static\client.html" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\static\context.html" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\static\debug.html" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\static\safari.html" />
+      <change type="NEW" beforePath="" afterPath="D:\PrivateWS\angular\ng-i18n\node_modules_ok\testacular\static\testacular.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/ng-i18n-0.2.0.js" afterPath="$PROJECT_DIR$/dist/ng-i18n-0.2.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/ng-i18n-0.2.0.min.js" afterPath="$PROJECT_DIR$/dist/ng-i18n-0.2.0.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="ng-i18n.iws" />
@@ -37,7 +340,7 @@
       <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="14" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
+            <state line="23" column="14" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -46,7 +349,7 @@
       <file leaf-file-name="servicesSpec.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/unit/servicesSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="34" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.23776224">
+            <state line="53" column="34" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.026234567">
               <folding />
             </state>
           </provider>
@@ -79,10 +382,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="partial1.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/partials/partial1.html">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="37" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
+            <state line="74" column="46" selection-start="2574" selection-end="2574" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -97,10 +400,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <file leaf-file-name="partial1.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/partials/partial1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="46" selection-start="2574" selection-end="2574" vertical-scroll-proportion="0.0">
+            <state line="3" column="37" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -288,6 +591,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -380,20 +684,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -618,20 +921,20 @@
     <frame x="-8" y="-8" width="1936" height="1186" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32898697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19395712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998997" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15919873" sideWeight="0.36910734" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18450184" sideWeight="0.6559454" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18450184" sideWeight="0.6559454" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3891675" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15919873" sideWeight="0.21965897" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34405458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34405458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32898697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="11" y="411" width="1897" height="329" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3229689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32898697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -804,14 +1107,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="14" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
+        <state line="23" column="14" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/servicesSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="34" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.23776224">
+        <state line="53" column="34" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.026234567">
           <folding />
         </state>
       </provider>

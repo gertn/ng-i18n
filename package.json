@@ -8,19 +8,18 @@
     "test": "test"
   },
   "dependencies": {
-    "grunt": "~0.4.0rc3",
     "grunt-contrib-jshint": "~0.1.0",
     "grunt-contrib-nodeunit": "~0.1.1",
     "testacular": "~0.4.0",
     "async": "~0.1.22"
   },
   "devDependencies": {
-    "grunt": "~0.4.0rc3",
-    "grunt-cli": "~0.1.4",
+    "grunt": "0.4.0rc6",
+    "grunt-cli": "0.1.6",
     "grunt-contrib-watch": "~0.2.0a",
-    "grunt-contrib-clean": "~0.4.0a",
-    "grunt-contrib-uglify": "~0.1.0",
-    "grunt-contrib-concat": "~0.1.1"
+    "grunt-contrib-clean": "0.4.0rc6",
+    "grunt-contrib-uglify": "0.1.1rc6",
+    "grunt-contrib-concat": "0.1.2rc6"
   },
   "scripts": {
     "test": "test"
