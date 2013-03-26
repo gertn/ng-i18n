@@ -1,3 +1,7 @@
+### v0.2.1
+
+* Bugfix #1 Error on source code minification
+
 ### v0.2.0
 
 * Added global config basePath

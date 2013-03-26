@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 				},
 				uglify : {
 					options : {
-						mangle : false
+						mangle : true
 					},
 					dist : {
 						src : '<%= srcdir %>/<%= pkg.name %>.js',

@@ -4,7 +4,7 @@ angular.module('ngI18nConfig', []).value('ngI18nConfig', {});
 angular.module('ngI18n', ['ngI18nService', 'ngI18nConfig'])
     .value('ngI18nVersion', '<%= pkg.version %>');
 
-angular.module('ngI18nService', [],function ($provide) {
+angular.module('ngI18nService', [], ['$provide',function ($provide) {
 
     $provide.factory('ngI18nResourceBundle', ['$http', 'ngI18nConfig', '$window',
         function ($http, ngI18nConfig, $window) {
@@ -71,4 +71,4 @@ angular.module('ngI18nService', [],function ($provide) {
             return { get:get};
         }]);
 
-}).value('name', 'ngI18nService');
+}]).value('name', 'ngI18nService');
