@@ -1,6 +1,6 @@
 /**
  * I18n module for AngularJs
- * @version v0.2.0 - 2013-03-26
+ * @version v0.2.1 - 2013-03-26
  * @link http://gertn.github.com/ng-i18n/
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -8,7 +8,7 @@
 
 angular.module('ngI18nConfig', []).value('ngI18nConfig', {});
 angular.module('ngI18n', ['ngI18nService', 'ngI18nConfig'])
-    .value('ngI18nVersion', '0.2.0');
+    .value('ngI18nVersion', '0.2.1');
 
 angular.module('ngI18nService', [], ['$provide',function ($provide) {
 
