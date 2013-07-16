@@ -41,7 +41,8 @@
       <section>
         <p><a href="https://travis-ci.org/gertn/ng-i18n"><img src="https://travis-ci.org/gertn/ng-i18n.png" alt="Build Status"></a></p>
 
-<h1>Internationalization module for AngularJS</h1>
+<h1>
+<a name="internationalization-module-for-angularjs" class="anchor" href="#internationalization-module-for-angularjs"><span class="octicon octicon-link"></span></a>Internationalization module for AngularJS</h1>
 
 <p>This is an internationalization module for AngularJS, it allows you to localize your application with resource bundles.
 <br>
@@ -49,13 +50,15 @@ The file extension of the resource bundles files is '.json'.
 <br>
 The build and compressed files can be found in the <code>dist</code> directory.</p>
 
-<h2>How to use</h2>
+<h2>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h2>
 
 <p>This example uses two locales, 'en' which is the default and 'nl'.
 <br>
 For more configuration options take a look at the 'ngI18nConfig' section.</p>
 
-<h3>1. create your resource bundle files</h3>
+<h3>
+<a name="1-create-your-resource-bundle-files" class="anchor" href="#1-create-your-resource-bundle-files"><span class="octicon octicon-link"></span></a>1. create your resource bundle files</h3>
 
 <p>You need to provide a default resource bundle for the default locale and one for locale 'nl'.
 <br>
@@ -88,13 +91,15 @@ Put these resource bundles in the 'i18n' directory.</p>
 <span class="p">}</span>
 </pre></div>
 
-<h3>2. add script tag after angular.js</h3>
+<h3>
+<a name="2-add-script-tag-after-angularjs" class="anchor" href="#2-add-script-tag-after-angularjs"><span class="octicon octicon-link"></span></a>2. add script tag after angular.js</h3>
 
 <div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"angular.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"ng-i18n.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 </pre></div>
 
-<h3>3. configure the module</h3>
+<h3>
+<a name="3-configure-the-module" class="anchor" href="#3-configure-the-module"><span class="octicon octicon-link"></span></a>3. configure the module</h3>
 
 <div class="highlight"><pre>    <span class="kd">var</span> <span class="nx">yourApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'yourApp'</span><span class="p">,[</span><span class="s1">'ngI18n'</span><span class="p">,</span> <span class="p">...</span> <span class="p">{</span><span class="nx">other</span> <span class="nx">includes</span><span class="p">}]);</span>
     <span class="nx">yourApp</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="s1">'ngI18nConfig'</span><span class="p">,</span> <span class="p">{</span>
@@ -103,12 +108,14 @@ Put these resource bundles in the 'i18n' directory.</p>
     <span class="p">});</span>
 </pre></div>
 
-<h3>4. add language switcher to your html</h3>
+<h3>
+<a name="4-add-language-switcher-to-your-html" class="anchor" href="#4-add-language-switcher-to-your-html"><span class="octicon octicon-link"></span></a>4. add language switcher to your html</h3>
 
 <div class="highlight"><pre>    <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"switchLanguage"</span> <span class="na">ng-model=</span><span class="s">"language"</span> <span class="na">id=</span><span class="s">"switchLanguage"</span> <span class="na">ng-options=</span><span class="s">"l.locale for l in languages"</span><span class="nt">&gt;</span>
 </pre></div>
 
-<h3>5. load the resource bundle from your main controller and $watch for changes to the language model</h3>
+<h3>
+<a name="5-load-the-resource-bundle-from-your-main-controller-and-watch-for-changes-to-the-language-model" class="anchor" href="#5-load-the-resource-bundle-from-your-main-controller-and-watch-for-changes-to-the-language-model"><span class="octicon octicon-link"></span></a>5. load the resource bundle from your main controller and $watch for changes to the language model</h3>
 
 <div class="highlight"><pre>   <span class="kd">function</span> <span class="nx">MainCtrl</span><span class="p">(</span><span class="nx">ngI18nResourceBundle</span><span class="p">,</span> <span class="nx">$scope</span><span class="p">)</span> <span class="p">{</span>
 
@@ -128,7 +135,8 @@ Put these resource bundles in the 'i18n' directory.</p>
    <span class="nx">MainCtrl</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'ngI18nResourceBundle'</span><span class="p">,</span> <span class="s1">'$scope'</span><span class="p">];</span>
 </pre></div>
 
-<h3>6. use the resourceBundle variable in your pages</h3>
+<h3>
+<a name="6-use-the-resourcebundle-variable-in-your-pages" class="anchor" href="#6-use-the-resourcebundle-variable-in-your-pages"><span class="octicon octicon-link"></span></a>6. use the resourceBundle variable in your pages</h3>
 
 <div class="highlight"><pre>    <span class="nt">&lt;p&gt;</span>{{resourceBundle.text_view_1}}<span class="nt">&lt;/p&gt;</span>
 </pre></div>
@@ -139,7 +147,8 @@ This is the first view, hopefully in English :)
 If you selected 'nl' as language then  it will be displayed as: <br>
 Dit is de eerste view, hopelijk in het Nederlands :)</p>
 
-<h2>ngI18nConfig</h2>
+<h2>
+<a name="ngi18nconfig" class="anchor" href="#ngi18nconfig"><span class="octicon octicon-link"></span></a>ngI18nConfig</h2>
 
 <p>You can declare 'ngI18nConfig' in your app as follows:</p>
 
@@ -156,7 +165,8 @@ Dit is de eerste view, hopelijk in het Nederlands :)</p>
 <li> supportedLocales: specifies the supported locales (required and in lowercase)</li>
 <li> basePath: specifies base path of url (optional)</li>
 <li> cache: enables caching of the resource bundle (optional)</li>
-</ul><h3>'defaultLocale' (always in lowercase, has no global default and should always be provided!!)</h3>
+</ul><h3>
+<a name="defaultlocale-always-in-lowercase-has-no-global-default-and-should-always-be-provided" class="anchor" href="#defaultlocale-always-in-lowercase-has-no-global-default-and-should-always-be-provided"><span class="octicon octicon-link"></span></a>'defaultLocale' (always in lowercase, has no global default and should always be provided!!)</h3>
 
 <p>Example config:</p>
 
@@ -168,7 +178,8 @@ Dit is de eerste view, hopelijk in het Nederlands :)</p>
 <span class="p">});</span>
 </pre></div>
 
-<h3>'supportedLocales' (always in lowercase, has no global default and should always be provided!!)</h3>
+<h3>
+<a name="supportedlocales-always-in-lowercase-has-no-global-default-and-should-always-be-provided" class="anchor" href="#supportedlocales-always-in-lowercase-has-no-global-default-and-should-always-be-provided"><span class="octicon octicon-link"></span></a>'supportedLocales' (always in lowercase, has no global default and should always be provided!!)</h3>
 
 <p>Example config:</p>
 
@@ -180,7 +191,8 @@ Dit is de eerste view, hopelijk in het Nederlands :)</p>
 <span class="p">});</span>
 </pre></div>
 
-<h3>'basePath' (global default is 'i18n')</h3>
+<h3>
+<a name="basepath-global-default-is-i18n" class="anchor" href="#basepath-global-default-is-i18n"><span class="octicon octicon-link"></span></a>'basePath' (global default is 'i18n')</h3>
 
 <p>Example config:</p>
 
@@ -192,7 +204,8 @@ Dit is de eerste view, hopelijk in het Nederlands :)</p>
 <span class="p">});</span>
 </pre></div>
 
-<h3>'cache' (global default is false)</h3>
+<h3>
+<a name="cache-global-default-is-false" class="anchor" href="#cache-global-default-is-false"><span class="octicon octicon-link"></span></a>'cache' (global default is false)</h3>
 
 <p>When the cache is enabled, $http stores the response from the server (the resource bundle) in local cache.
 <br>
@@ -206,7 +219,8 @@ Example config:</p>
 <span class="p">});</span>
 </pre></div>
 
-<h2>ngI18nResourceBundle service</h2>
+<h2>
+<a name="ngi18nresourcebundle-service" class="anchor" href="#ngi18nresourcebundle-service"><span class="octicon octicon-link"></span></a>ngI18nResourceBundle service</h2>
 
 <p>It has one method <code>get(options)</code>.
 <br>
@@ -234,7 +248,8 @@ Is this locale the default locale?
 <ul>
 <li> locale: specifies the locale for the resource bundle (optional)</li>
 <li> name: specifies the name for the resource bundle (optional)</li>
-</ul><h3>Examples</h3>
+</ul><h3>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h3>
 
 <p>The examples use the following configuration:</p>
 
@@ -249,42 +264,48 @@ Is this locale the default locale?
 
 <p>Http Server running at http://localhost:8000/</p>
 
-<h4>example - locale is default locale</h4>
+<h4>
+<a name="example---locale-is-default-locale" class="anchor" href="#example---locale-is-default-locale"><span class="octicon octicon-link"></span></a>example - locale is default locale</h4>
 
 <div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'en'</span><span class="p">});</span>
 </pre></div>
 
 <p>=&gt; GET http://localhost:8000/app/i18n/resourceBundle.json</p>
 
-<h4>example - locale is one of the supported locales</h4>
+<h4>
+<a name="example---locale-is-one-of-the-supported-locales" class="anchor" href="#example---locale-is-one-of-the-supported-locales"><span class="octicon octicon-link"></span></a>example - locale is one of the supported locales</h4>
 
 <div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'nl'</span><span class="p">});</span>
 </pre></div>
 
 <p>=&gt; GET http://localhost:8000/app/i18n/resourceBundle_nl.json</p>
 
-<h4>example - language of locale is one of the supported locales</h4>
+<h4>
+<a name="example---language-of-locale-is-one-of-the-supported-locales" class="anchor" href="#example---language-of-locale-is-one-of-the-supported-locales"><span class="octicon octicon-link"></span></a>example - language of locale is one of the supported locales</h4>
 
 <div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'en-US'</span><span class="p">});</span>
 </pre></div>
 
 <p>=&gt; GET http://localhost:8000/app/i18n/resourceBundle_en.json</p>
 
-<h4>example - locale with country is one of the supported locales</h4>
+<h4>
+<a name="example---locale-with-country-is-one-of-the-supported-locales" class="anchor" href="#example---locale-with-country-is-one-of-the-supported-locales"><span class="octicon octicon-link"></span></a>example - locale with country is one of the supported locales</h4>
 
 <div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'fr-BE'</span><span class="p">});</span>
 </pre></div>
 
 <p>=&gt; GET http://localhost:8000/app/i18n/resourceBundle_fr-be.json (lowercase)</p>
 
-<h4>example - locale not supported</h4>
+<h4>
+<a name="example---locale-not-supported" class="anchor" href="#example---locale-not-supported"><span class="octicon octicon-link"></span></a>example - locale not supported</h4>
 
 <div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'de'</span><span class="p">});</span>
 </pre></div>
 
 <p>=&gt; GET http://localhost:8000/app/i18n/resourceBundle.json  (default resourceBundle)</p>
 
-<h4>example - custom name</h4>
+<h4>
+<a name="example---custom-name" class="anchor" href="#example---custom-name"><span class="octicon octicon-link"></span></a>example - custom name</h4>
 
 <div class="highlight"><pre><span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'en'</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">'customName'</span><span class="p">});</span>
 </pre></div>
@@ -296,7 +317,8 @@ Is this locale the default locale?
 
 <p>=&gt; GET http://localhost:8000/app/i18n/customName_nl.json</p>
 
-<h4>example - caching</h4>
+<h4>
+<a name="example---caching" class="anchor" href="#example---caching"><span class="octicon octicon-link"></span></a>example - caching</h4>
 
 <div class="highlight"><pre><span class="c1">//first call</span>
 <span class="nx">ngI18nResourceBundle</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">locale</span><span class="o">:</span> <span class="s1">'en'</span><span class="p">});</span>
@@ -308,13 +330,15 @@ Is this locale the default locale?
 <br>
 second call =&gt; no call, the resource bundle is retrieved from local cache</p>
 
-<h2>Example app</h2>
+<h2>
+<a name="example-app" class="anchor" href="#example-app"><span class="octicon octicon-link"></span></a>Example app</h2>
 
 <p>You can find an example app in the app directory.
 <br>
 Look at <code>app.js</code>, <code>controller.js</code>, <code>index.html</code> and the two partials in the <code>partials</code> directory.</p>
 
-<h3>Running the example app</h3>
+<h3>
+<a name="running-the-example-app" class="anchor" href="#running-the-example-app"><span class="octicon octicon-link"></span></a>Running the example app</h3>
 
 <p>You can pick one of these options:</p>
 
@@ -327,10 +351,20 @@ your browser.</p>
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/gertn">gertn</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-20779811-9");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
